@@ -1,4 +1,5 @@
 ﻿using System;
+using cassandra_app.cassandra;
 
 namespace cassandra_app
 {
@@ -7,6 +8,7 @@ namespace cassandra_app
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Backend be = new Backend();
         }
     }
 }
