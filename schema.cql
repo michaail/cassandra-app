@@ -14,6 +14,7 @@ CREATE TABLE car (
   primary key (carID) 
 );
 
+
 CREATE TABLE user ( 
   phone int, 
   first_name text, 

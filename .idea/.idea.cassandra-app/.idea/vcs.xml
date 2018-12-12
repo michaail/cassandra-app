@@ -2,12 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/vagrant-cassandra" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/vagrant-cassandra/chef/cookbooks/cassandra" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/vagrant-cassandra/tmp/librarian/cache/source/git/4e12f6400d8a8336" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/vagrant-cassandra/vagrant/cookbooks/cassandra" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/vagrant-cassandra/vagrant/tmp/librarian/cache/source/git/d32dbffabe3ed3cf" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/vagrant-setup/chef/cookbooks/cassandra" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/vagrant-setup/tmp/librarian/cache/source/git/4e12f6400d8a8336" vcs="Git" />
   </component>
 </project>
