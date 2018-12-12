@@ -6,6 +6,14 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Program.cs" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
+      <e p="cassandra" t="Include">
+        <e p="Backend.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="Auditorium.cs" t="Include" />
+          <e p="Movie.cs" t="Include" />
+          <e p="Screening.cs" t="Include" />
+        </e>
+      </e>
       <e p="cassandra-app.csproj" t="IncludeRecursive" />
       <e p="cassandra-app.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive">
@@ -16,6 +24,1775 @@
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
+      <e p="schema.cql" t="Include" />
+      <e p="vagrant-setup" t="Include">
+        <e p=".gitignore" t="Include" />
+        <e p="Cheffile" t="Include" />
+        <e p="Cheffile.lock" t="Include" />
+        <e p="LICENSE.txt" t="Include" />
+        <e p="README.md" t="Include" />
+        <e p="Vagrantfile" t="Include" />
+        <e p="Vagrantfile.chef" t="Include" />
+        <e p="chef" t="Include">
+          <e p=".gitkeep" t="Include" />
+          <e p="cookbooks" t="Include">
+            <e p="7-zip" t="Include">
+              <e p="CHANGELOG.md" t="Include" />
+              <e p="README.md" t="Include" />
+              <e p="attributes" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="metadata.json" t="Include" />
+              <e p="metadata.rb" t="Include" />
+              <e p="recipes" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+            </e>
+            <e p="apt" t="Include">
+              <e p="CHANGELOG.md" t="Include" />
+              <e p="README.md" t="Include" />
+              <e p="attributes" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="files" t="Include">
+                <e p="default" t="Include">
+                  <e p="apt-proxy-v2.conf" t="Include" />
+                </e>
+              </e>
+              <e p="libraries" t="Include">
+                <e p="helpers.rb" t="Include" />
+                <e p="matchers.rb" t="Include" />
+                <e p="network.rb" t="Include" />
+              </e>
+              <e p="metadata.json" t="Include" />
+              <e p="metadata.rb" t="Include" />
+              <e p="providers" t="Include">
+                <e p="preference.rb" t="Include" />
+                <e p="repository.rb" t="Include" />
+              </e>
+              <e p="recipes" t="Include">
+                <e p="cacher-client.rb" t="Include" />
+                <e p="cacher-ng.rb" t="Include" />
+                <e p="default.rb" t="Include" />
+                <e p="unattended-upgrades.rb" t="Include" />
+              </e>
+              <e p="resources" t="Include">
+                <e p="preference.rb" t="Include" />
+                <e p="repository.rb" t="Include" />
+              </e>
+              <e p="templates" t="Include">
+                <e p="debian-6.0" t="Include">
+                  <e p="acng.conf.erb" t="Include" />
+                </e>
+                <e p="default" t="Include">
+                  <e p="01proxy.erb" t="Include" />
+                  <e p="20auto-upgrades.erb" t="Include" />
+                  <e p="50unattended-upgrades.erb" t="Include" />
+                  <e p="acng.conf.erb" t="Include" />
+                  <e p="unattended-upgrades.seed.erb" t="Include" />
+                </e>
+                <e p="ubuntu-10.04" t="Include">
+                  <e p="acng.conf.erb" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="ark" t="Include">
+              <e p="CHANGELOG.md" t="Include" />
+              <e p="README.md" t="Include" />
+              <e p="attributes" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="files" t="Include">
+                <e p="default" t="Include">
+                  <e p="foo.tar.gz" t="Include" />
+                  <e p="foo.tbz" t="Include" />
+                  <e p="foo.tgz" t="Include" />
+                  <e p="foo.txz" t="Include" />
+                  <e p="foo.zip" t="Include" />
+                  <e p="foo_sub.tar.gz" t="Include" />
+                  <e p="foo_sub.zip" t="Include" />
+                  <e p="tests" t="Include">
+                    <e p="minitest" t="Include">
+                      <e p="default_test.rb" t="Include" />
+                      <e p="support" t="Include">
+                        <e p="helpers.rb" t="Include" />
+                      </e>
+                      <e p="test_test.rb" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="libraries" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="metadata.json" t="Include" />
+              <e p="metadata.rb" t="Include" />
+              <e p="providers" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="recipes" t="Include">
+                <e p="default.rb" t="Include" />
+                <e p="test.rb" t="Include" />
+              </e>
+              <e p="resources" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="templates" t="Include">
+                <e p="default" t="Include">
+                  <e p="add_to_path.sh.erb" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="cassandra" t="Include">
+              <e p=".gitignore" t="Include" />
+              <e p=".kitchen.yml" t="Include" />
+              <e p="Berksfile" t="Include" />
+              <e p="ChangeLog.md" t="Include" />
+              <e p="Gemfile" t="Include" />
+              <e p="README.md" t="Include" />
+              <e p="Thorfile" t="Include" />
+              <e p="Vagrantfile" t="Include" />
+              <e p="attributes" t="Include">
+                <e p="common.rb" t="Include" />
+                <e p="datastax.rb" t="Include" />
+                <e p="tarball.rb" t="Include" />
+                <e p="version.rb" t="Include" />
+              </e>
+              <e p="chefignore" t="Include" />
+              <e p="libraries" t="Include">
+                <e p="config_helpers.rb" t="Include" />
+              </e>
+              <e p="metadata.json" t="Include" />
+              <e p="metadata.rb" t="Include" />
+              <e p="recipes" t="Include">
+                <e p="datastax.rb" t="Include" />
+                <e p="default.rb" t="Include" />
+                <e p="opscenter_agent.rb" t="Include" />
+                <e p="opscenter_agent_datastax.rb" t="Include" />
+                <e p="opscenter_agent_tarball.rb" t="Include" />
+                <e p="opscenter_server.rb" t="Include" />
+                <e p="tarball.rb" t="Include" />
+                <e p="user.rb" t="Include" />
+              </e>
+              <e p="templates" t="Include">
+                <e p="default" t="Include">
+                  <e p="cassandra-cli.erb" t="Include" />
+                  <e p="cassandra-env.sh.erb" t="Include" />
+                  <e p="cassandra-rackdc.properties.erb" t="Include" />
+                  <e p="cassandra-topology.properties.erb" t="Include" />
+                  <e p="cassandra.yaml.erb" t="Include" />
+                  <e p="cqlsh.erb" t="Include" />
+                  <e p="debian.cassandra.init.erb" t="Include" />
+                  <e p="log4j-server.properties.erb" t="Include" />
+                  <e p="logback-tools.xml.erb" t="Include" />
+                  <e p="logback.xml.erb" t="Include" />
+                  <e p="opscenter-agent.conf.erb" t="Include" />
+                  <e p="opscenterd.conf.erb" t="Include" />
+                  <e p="rhel.cassandra.init.erb" t="Include" />
+                </e>
+              </e>
+              <e p="test" t="Include">
+                <e p="integration" t="Include">
+                  <e p="default" t="Include">
+                    <e p="serverspec" t="Include">
+                      <e p="default_spec.rb" t="Include" />
+                    </e>
+                  </e>
+                  <e p="dse" t="Include">
+                    <e p="serverspec" t="Include">
+                      <e p="dse_spec.rb" t="Include" />
+                    </e>
+                  </e>
+                  <e p="tarball" t="Include">
+                    <e p="serverspec" t="Include">
+                      <e p="tarball_spec.rb" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="chef_handler" t="Include">
+              <e p="CHANGELOG.md" t="Include" />
+              <e p="README.md" t="Include" />
+              <e p="attributes" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="files" t="Include">
+                <e p="default" t="Include">
+                  <e p="handlers" t="Include">
+                    <e p="README" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="libraries" t="Include">
+                <e p="matchers.rb" t="Include" />
+              </e>
+              <e p="metadata.json" t="Include" />
+              <e p="metadata.rb" t="Include" />
+              <e p="providers" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="recipes" t="Include">
+                <e p="default.rb" t="Include" />
+                <e p="json_file.rb" t="Include" />
+              </e>
+              <e p="resources" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+            </e>
+            <e p="firewall" t="Include">
+              <e p="CHANGELOG.md" t="Include" />
+              <e p="README.md" t="Include" />
+              <e p="metadata.json" t="Include" />
+              <e p="metadata.rb" t="Include" />
+              <e p="providers" t="Include">
+                <e p="rule_ufw.rb" t="Include" />
+                <e p="ufw.rb" t="Include" />
+              </e>
+              <e p="recipes" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="resources" t="Include">
+                <e p="default.rb" t="Include" />
+                <e p="rule.rb" t="Include" />
+              </e>
+            </e>
+            <e p="homebrew" t="Include">
+              <e p="CHANGELOG.md" t="Include" />
+              <e p="CONTRIBUTING.md" t="Include" />
+              <e p="README.md" t="Include" />
+              <e p="attributes" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="libraries" t="Include">
+                <e p="helpers.rb" t="Include" />
+              </e>
+              <e p="metadata.json" t="Include" />
+              <e p="recipes" t="Include">
+                <e p="cask.rb" t="Include" />
+                <e p="default.rb" t="Include" />
+                <e p="install_casks.rb" t="Include" />
+                <e p="install_formulas.rb" t="Include" />
+                <e p="install_taps.rb" t="Include" />
+              </e>
+              <e p="resources" t="Include">
+                <e p="cask.rb" t="Include" />
+                <e p="tap.rb" t="Include" />
+              </e>
+            </e>
+            <e p="java" t="Include">
+              <e p="CHANGELOG.md" t="Include" />
+              <e p="CONTRIBUTING.md" t="Include" />
+              <e p="README.md" t="Include" />
+              <e p="attributes" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="libraries" t="Include">
+                <e p="helpers.rb" t="Include" />
+              </e>
+              <e p="metadata.json" t="Include" />
+              <e p="recipes" t="Include">
+                <e p="default.rb" t="Include" />
+                <e p="default_java_symlink.rb" t="Include" />
+                <e p="homebrew.rb" t="Include" />
+                <e p="ibm.rb" t="Include" />
+                <e p="ibm_tar.rb" t="Include" />
+                <e p="notify.rb" t="Include" />
+                <e p="openjdk.rb" t="Include" />
+                <e p="oracle.rb" t="Include" />
+                <e p="oracle_i386.rb" t="Include" />
+                <e p="oracle_jce.rb" t="Include" />
+                <e p="oracle_rpm.rb" t="Include" />
+                <e p="purge_packages.rb" t="Include" />
+                <e p="set_attributes_from_version.rb" t="Include" />
+                <e p="set_java_home.rb" t="Include" />
+                <e p="windows.rb" t="Include" />
+              </e>
+              <e p="resources" t="Include">
+                <e p="alternatives.rb" t="Include" />
+                <e p="certificate.rb" t="Include" />
+                <e p="jce.rb" t="Include" />
+                <e p="oracle_install.rb" t="Include" />
+              </e>
+              <e p="templates" t="Include">
+                <e p="ibm_jdk.installer.properties.erb" t="Include" />
+                <e p="jdk.sh.erb" t="Include" />
+                <e p="oracle.jinfo.erb" t="Include" />
+              </e>
+            </e>
+            <e p="ufw" t="Include">
+              <e p="CHANGELOG.md" t="Include" />
+              <e p="README.md" t="Include" />
+              <e p="attributes" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="metadata.json" t="Include" />
+              <e p="metadata.rb" t="Include" />
+              <e p="recipes" t="Include">
+                <e p="databag.rb" t="Include" />
+                <e p="default.rb" t="Include" />
+                <e p="disable.rb" t="Include" />
+                <e p="recipes.rb" t="Include" />
+                <e p="securitylevel.rb" t="Include" />
+              </e>
+            </e>
+            <e p="ulimit" t="Include">
+              <e p="CHANGELOG.md" t="Include" />
+              <e p="README.md" t="Include" />
+              <e p="attributes" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="definitions" t="Include">
+                <e p="user_ulimit.rb" t="Include" />
+              </e>
+              <e p="metadata.json" t="Include" />
+              <e p="metadata.rb" t="Include" />
+              <e p="providers" t="Include">
+                <e p="domain.rb" t="Include" />
+                <e p="rule.rb" t="Include" />
+              </e>
+              <e p="recipes" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="resources" t="Include">
+                <e p="domain.rb" t="Include" />
+                <e p="rule.rb" t="Include" />
+              </e>
+              <e p="templates" t="Include">
+                <e p="default" t="Include">
+                  <e p="domain.erb" t="Include" />
+                  <e p="su.erb" t="Include" />
+                  <e p="ulimit.erb" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="windows" t="Include">
+              <e p="CHANGELOG.md" t="Include" />
+              <e p="CONTRIBUTING" t="Include" />
+              <e p="LICENSE" t="Include" />
+              <e p="README.md" t="Include" />
+              <e p="TODO.md" t="Include" />
+              <e p="attributes" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="files" t="Include">
+                <e p="default" t="Include">
+                  <e p="handlers" t="Include">
+                    <e p="windows_reboot_handler.rb" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="libraries" t="Include">
+                <e p="feature_base.rb" t="Include" />
+                <e p="matchers.rb" t="Include" />
+                <e p="powershell_helper.rb" t="Include" />
+                <e p="powershell_out.rb" t="Include" />
+                <e p="registry_helper.rb" t="Include" />
+                <e p="version.rb" t="Include" />
+                <e p="windows_architecture_helper.rb" t="Include" />
+                <e p="windows_helper.rb" t="Include" />
+                <e p="windows_privileged.rb" t="Include" />
+                <e p="wmi_helper.rb" t="Include" />
+              </e>
+              <e p="metadata.json" t="Include" />
+              <e p="metadata.rb" t="Include" />
+              <e p="providers" t="Include">
+                <e p="auto_run.rb" t="Include" />
+                <e p="batch.rb" t="Include" />
+                <e p="feature_dism.rb" t="Include" />
+                <e p="feature_powershell.rb" t="Include" />
+                <e p="feature_servermanagercmd.rb" t="Include" />
+                <e p="package.rb" t="Include" />
+                <e p="pagefile.rb" t="Include" />
+                <e p="path.rb" t="Include" />
+                <e p="printer.rb" t="Include" />
+                <e p="printer_port.rb" t="Include" />
+                <e p="reboot.rb" t="Include" />
+                <e p="registry.rb" t="Include" />
+                <e p="shortcut.rb" t="Include" />
+                <e p="task.rb" t="Include" />
+                <e p="zipfile.rb" t="Include" />
+              </e>
+              <e p="recipes" t="Include">
+                <e p="default.rb" t="Include" />
+                <e p="reboot_handler.rb" t="Include" />
+              </e>
+              <e p="resources" t="Include">
+                <e p="auto_run.rb" t="Include" />
+                <e p="batch.rb" t="Include" />
+                <e p="feature.rb" t="Include" />
+                <e p="package.rb" t="Include" />
+                <e p="pagefile.rb" t="Include" />
+                <e p="path.rb" t="Include" />
+                <e p="printer.rb" t="Include" />
+                <e p="printer_port.rb" t="Include" />
+                <e p="reboot.rb" t="Include" />
+                <e p="registry.rb" t="Include" />
+                <e p="shortcut.rb" t="Include" />
+                <e p="task.rb" t="Include" />
+                <e p="zipfile.rb" t="Include" />
+              </e>
+            </e>
+            <e p="yum" t="Include">
+              <e p="CHANGELOG.md" t="Include" />
+              <e p="README.md" t="Include" />
+              <e p="attributes" t="Include">
+                <e p="main.rb" t="Include" />
+              </e>
+              <e p="libraries" t="Include">
+                <e p="matchers.rb" t="Include" />
+              </e>
+              <e p="metadata.json" t="Include" />
+              <e p="metadata.rb" t="Include" />
+              <e p="providers" t="Include">
+                <e p="globalconfig.rb" t="Include" />
+                <e p="repository.rb" t="Include" />
+              </e>
+              <e p="recipes" t="Include">
+                <e p="default.rb" t="Include" />
+              </e>
+              <e p="resources" t="Include">
+                <e p="globalconfig.rb" t="Include" />
+                <e p="repository.rb" t="Include" />
+              </e>
+              <e p="templates" t="Include">
+                <e p="default" t="Include">
+                  <e p="main.erb" t="Include" />
+                  <e p="repo.erb" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="data_bags" t="Include">
+            <e p=".gitkeep" t="Include" />
+          </e>
+          <e p="roles" t="Include">
+            <e p=".gitkeep" t="Include" />
+          </e>
+          <e p="site-cookbooks" t="Include">
+            <e p=".gitkeep" t="Include" />
+          </e>
+        </e>
+        <e p="tmp" t="Include">
+          <e p="librarian" t="Include">
+            <e p="cache" t="Include">
+              <e p="source" t="Include">
+                <e p="chef" t="Include">
+                  <e p="site" t="Include">
+                    <e p="877777683730772c" t="Include">
+                      <e p="7-zip" t="Include">
+                        <e p="metadata.json" t="Include" />
+                        <e p="version" t="Include">
+                          <e p="1.0.2" t="Include" />
+                        </e>
+                        <e p="version-uri" t="Include">
+                          <e p="cc9c69fafda81b44" t="Include">
+                            <e p="metadata.json" t="Include" />
+                            <e p="package" t="Include">
+                              <e p="CHANGELOG.md" t="Include" />
+                              <e p="README.md" t="Include" />
+                              <e p="attributes" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="metadata.json" t="Include" />
+                              <e p="metadata.rb" t="Include" />
+                              <e p="recipes" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                            </e>
+                            <e p="package.tar.gz" t="Include" />
+                          </e>
+                        </e>
+                      </e>
+                      <e p="apt" t="Include">
+                        <e p="metadata.json" t="Include" />
+                        <e p="version" t="Include">
+                          <e p="2.6.0" t="Include" />
+                        </e>
+                        <e p="version-uri" t="Include">
+                          <e p="0d5f53a89e511253" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="0e7210de9a81ab1e" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="11d48994f84d9ce6" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="19d9e032a17e123d" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="1e653de9f10f2e99" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="2ee40a7666c90148" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="4266c12eefe6a28f" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="4640427f3d093a36" t="Include">
+                            <e p="metadata.json" t="Include" />
+                            <e p="package" t="Include">
+                              <e p="CHANGELOG.md" t="Include" />
+                              <e p="README.md" t="Include" />
+                              <e p="attributes" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="files" t="Include">
+                                <e p="default" t="Include">
+                                  <e p="apt-proxy-v2.conf" t="Include" />
+                                </e>
+                              </e>
+                              <e p="libraries" t="Include">
+                                <e p="helpers.rb" t="Include" />
+                                <e p="matchers.rb" t="Include" />
+                                <e p="network.rb" t="Include" />
+                              </e>
+                              <e p="metadata.json" t="Include" />
+                              <e p="metadata.rb" t="Include" />
+                              <e p="providers" t="Include">
+                                <e p="preference.rb" t="Include" />
+                                <e p="repository.rb" t="Include" />
+                              </e>
+                              <e p="recipes" t="Include">
+                                <e p="cacher-client.rb" t="Include" />
+                                <e p="cacher-ng.rb" t="Include" />
+                                <e p="default.rb" t="Include" />
+                                <e p="unattended-upgrades.rb" t="Include" />
+                              </e>
+                              <e p="resources" t="Include">
+                                <e p="preference.rb" t="Include" />
+                                <e p="repository.rb" t="Include" />
+                              </e>
+                              <e p="templates" t="Include">
+                                <e p="debian-6.0" t="Include">
+                                  <e p="acng.conf.erb" t="Include" />
+                                </e>
+                                <e p="default" t="Include">
+                                  <e p="01proxy.erb" t="Include" />
+                                  <e p="20auto-upgrades.erb" t="Include" />
+                                  <e p="50unattended-upgrades.erb" t="Include" />
+                                  <e p="acng.conf.erb" t="Include" />
+                                  <e p="unattended-upgrades.seed.erb" t="Include" />
+                                </e>
+                                <e p="ubuntu-10.04" t="Include">
+                                  <e p="acng.conf.erb" t="Include" />
+                                </e>
+                              </e>
+                            </e>
+                            <e p="package.tar.gz" t="Include" />
+                          </e>
+                          <e p="489c3976eb3ec417" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="59314f173b9a6a2c" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="628f31c4f94656b3" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="6920c4b51b532b0c" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="7cc18bd40038b160" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="86c6fd66b3749282" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="8c2b400519318b22" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="905168fab77c51a4" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="9cc1e1a2cac8f0a7" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="ac34f6fb95033154" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="be7a33b8f0b0804d" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="c05dc2b71b57ba6d" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="c7546d8ce5d11321" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="cf4e5507d60af518" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="d8c9adcb23589497" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="e17765c832d6a765" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="ed177cf6bc5b77ca" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="fb7e07116368b428" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                        </e>
+                      </e>
+                      <e p="ark" t="Include">
+                        <e p="metadata.json" t="Include" />
+                        <e p="version" t="Include">
+                          <e p="0.9.0" t="Include" />
+                        </e>
+                        <e p="version-uri" t="Include">
+                          <e p="0c589940d31d86fa" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="0ff9f9a5681bfd8f" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="288754f632593c42" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="62f1280be3174883" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="75682d0ec1007cbe" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="82b3d59227190c3f" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="84c6182cf21c9538" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="8614aa183b68758a" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="88f23a52af9ce848" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="91af4d3510efb621" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="9774bf22ee3e4f03" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="a09a04138c906e7f" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="d60ed36088f00898" t="Include">
+                            <e p="metadata.json" t="Include" />
+                            <e p="package" t="Include">
+                              <e p="CHANGELOG.md" t="Include" />
+                              <e p="README.md" t="Include" />
+                              <e p="attributes" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="files" t="Include">
+                                <e p="default" t="Include">
+                                  <e p="foo.tar.gz" t="Include" />
+                                  <e p="foo.tbz" t="Include" />
+                                  <e p="foo.tgz" t="Include" />
+                                  <e p="foo.txz" t="Include" />
+                                  <e p="foo.zip" t="Include" />
+                                  <e p="foo_sub.tar.gz" t="Include" />
+                                  <e p="foo_sub.zip" t="Include" />
+                                  <e p="tests" t="Include">
+                                    <e p="minitest" t="Include">
+                                      <e p="default_test.rb" t="Include" />
+                                      <e p="support" t="Include">
+                                        <e p="helpers.rb" t="Include" />
+                                      </e>
+                                      <e p="test_test.rb" t="Include" />
+                                    </e>
+                                  </e>
+                                </e>
+                              </e>
+                              <e p="libraries" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="metadata.json" t="Include" />
+                              <e p="metadata.rb" t="Include" />
+                              <e p="providers" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="recipes" t="Include">
+                                <e p="default.rb" t="Include" />
+                                <e p="test.rb" t="Include" />
+                              </e>
+                              <e p="resources" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="templates" t="Include">
+                                <e p="default" t="Include">
+                                  <e p="add_to_path.sh.erb" t="Include" />
+                                </e>
+                              </e>
+                            </e>
+                            <e p="package.tar.gz" t="Include" />
+                          </e>
+                          <e p="dede046507d36477" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="f66c9592aa415290" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                        </e>
+                      </e>
+                      <e p="chef_handler" t="Include">
+                        <e p="metadata.json" t="Include" />
+                        <e p="version" t="Include">
+                          <e p="1.1.6" t="Include" />
+                        </e>
+                        <e p="version-uri" t="Include">
+                          <e p="03bf8c36046ac2f1" t="Include">
+                            <e p="metadata.json" t="Include" />
+                            <e p="package" t="Include">
+                              <e p="CHANGELOG.md" t="Include" />
+                              <e p="README.md" t="Include" />
+                              <e p="attributes" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="files" t="Include">
+                                <e p="default" t="Include">
+                                  <e p="handlers" t="Include">
+                                    <e p="README" t="Include" />
+                                  </e>
+                                </e>
+                              </e>
+                              <e p="libraries" t="Include">
+                                <e p="matchers.rb" t="Include" />
+                              </e>
+                              <e p="metadata.json" t="Include" />
+                              <e p="metadata.rb" t="Include" />
+                              <e p="providers" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="recipes" t="Include">
+                                <e p="default.rb" t="Include" />
+                                <e p="json_file.rb" t="Include" />
+                              </e>
+                              <e p="resources" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                            </e>
+                            <e p="package.tar.gz" t="Include" />
+                          </e>
+                          <e p="2702023f71f342c1" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="2deb6faecbc2fcd9" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="4dec118673ee147b" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="4ebcdfd38ae16b6a" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="5f775c0177685df6" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="7a006e5accbbb8aa" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="8230e52ffe145db3" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="83f741c277badc75" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="986da5f8c1024797" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="9e7453d64aaa9f4f" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="a0818d5333a17ed8" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="bdd58a8939763fb3" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="f2678cb83405c495" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                        </e>
+                      </e>
+                      <e p="firewall" t="Include">
+                        <e p="metadata.json" t="Include" />
+                        <e p="version" t="Include">
+                          <e p="0.11.8" t="Include" />
+                        </e>
+                        <e p="version-uri" t="Include">
+                          <e p="05f3ac07d7252157" t="Include">
+                            <e p="metadata.json" t="Include" />
+                            <e p="package" t="Include">
+                              <e p="CHANGELOG.md" t="Include" />
+                              <e p="README.md" t="Include" />
+                              <e p="metadata.json" t="Include" />
+                              <e p="metadata.rb" t="Include" />
+                              <e p="providers" t="Include">
+                                <e p="rule_ufw.rb" t="Include" />
+                                <e p="ufw.rb" t="Include" />
+                              </e>
+                              <e p="recipes" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="resources" t="Include">
+                                <e p="default.rb" t="Include" />
+                                <e p="rule.rb" t="Include" />
+                              </e>
+                            </e>
+                            <e p="package.tar.gz" t="Include" />
+                          </e>
+                          <e p="086c22171c048877" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="134938425ccc0480" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="154a747c3d8a0cd8" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="1580878c826809e8" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="19a0c35da0ed1013" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="19d517dabde8c595" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="1e96e5d2f2c4025e" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="1fed8cb76da67273" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="208101c45c7b7edf" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="2a5be53ccc3a333a" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="317ca9250169fe98" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="395e53078c120912" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="3a5e0a68b3fc4560" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="455322f339e74c97" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="5746a8f0eed9c049" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="6441b6979c345f09" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="653713f4cfd13722" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="68bb1546468f8878" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="6c4569f596d3d90f" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="6fadd252ac30c668" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="706d819481ba75c3" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="72b6f1c9ad14a08f" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="77e051c813771e61" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="84a2b1be8b044a71" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="9e15cb9c33247eed" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="ab4955dbbd78f51d" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="adae63c216233d89" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="adc6e873c2ae7eba" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="b173cedac7578b1b" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="b812e13ec36f9a12" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="bd4e398acc1fd927" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="be2cec4f7b358301" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="c43b3723e069c880" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="c84417b4f5bd177b" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="ca36f1d9f9806327" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="f1feae0e8c3e579b" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="fb2acfa5d4975e23" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                        </e>
+                      </e>
+                      <e p="homebrew" t="Include">
+                        <e p="metadata.json" t="Include" />
+                        <e p="version" t="Include">
+                          <e p="5.0.8" t="Include" />
+                        </e>
+                        <e p="version-uri" t="Include">
+                          <e p="3a8728f00de5c707" t="Include">
+                            <e p="metadata.json" t="Include" />
+                            <e p="package" t="Include">
+                              <e p="CHANGELOG.md" t="Include" />
+                              <e p="CONTRIBUTING.md" t="Include" />
+                              <e p="README.md" t="Include" />
+                              <e p="attributes" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="libraries" t="Include">
+                                <e p="helpers.rb" t="Include" />
+                              </e>
+                              <e p="metadata.json" t="Include" />
+                              <e p="recipes" t="Include">
+                                <e p="cask.rb" t="Include" />
+                                <e p="default.rb" t="Include" />
+                                <e p="install_casks.rb" t="Include" />
+                                <e p="install_formulas.rb" t="Include" />
+                                <e p="install_taps.rb" t="Include" />
+                              </e>
+                              <e p="resources" t="Include">
+                                <e p="cask.rb" t="Include" />
+                                <e p="tap.rb" t="Include" />
+                              </e>
+                            </e>
+                            <e p="package.tar.gz" t="Include" />
+                          </e>
+                        </e>
+                      </e>
+                      <e p="java" t="Include">
+                        <e p="metadata.json" t="Include" />
+                        <e p="version" t="Include">
+                          <e p="1.28.0" t="Include" />
+                          <e p="3.1.2" t="Include" />
+                        </e>
+                        <e p="version-uri" t="Include">
+                          <e p="167969790cc8ad3f" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="255672b012133bb2" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="3d58bc49c2eaa7d6" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="40d225a1819894ea" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="48448d1e49fae0da" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="527efea5ae1d9392" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="66291b06119672fe" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="66510773fbbf1166" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="66e3ecc7411bce9e" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="6ec3dd5bf327b324" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="6eec73aaab837aea" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="7deb84af5974e251" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="886e356189b71666" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="8b7c91526a7ade70" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="8ea00f7af582c5e7" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="a40979371897e5fa" t="Include">
+                            <e p="metadata.json" t="Include" />
+                            <e p="package" t="Include">
+                              <e p="CHANGELOG.md" t="Include" />
+                              <e p="CONTRIBUTING.md" t="Include" />
+                              <e p="README.md" t="Include" />
+                              <e p="attributes" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="libraries" t="Include">
+                                <e p="helpers.rb" t="Include" />
+                              </e>
+                              <e p="metadata.json" t="Include" />
+                              <e p="recipes" t="Include">
+                                <e p="default.rb" t="Include" />
+                                <e p="default_java_symlink.rb" t="Include" />
+                                <e p="homebrew.rb" t="Include" />
+                                <e p="ibm.rb" t="Include" />
+                                <e p="ibm_tar.rb" t="Include" />
+                                <e p="notify.rb" t="Include" />
+                                <e p="openjdk.rb" t="Include" />
+                                <e p="oracle.rb" t="Include" />
+                                <e p="oracle_i386.rb" t="Include" />
+                                <e p="oracle_jce.rb" t="Include" />
+                                <e p="oracle_rpm.rb" t="Include" />
+                                <e p="purge_packages.rb" t="Include" />
+                                <e p="set_attributes_from_version.rb" t="Include" />
+                                <e p="set_java_home.rb" t="Include" />
+                                <e p="windows.rb" t="Include" />
+                              </e>
+                              <e p="resources" t="Include">
+                                <e p="alternatives.rb" t="Include" />
+                                <e p="certificate.rb" t="Include" />
+                                <e p="jce.rb" t="Include" />
+                                <e p="oracle_install.rb" t="Include" />
+                              </e>
+                              <e p="templates" t="Include">
+                                <e p="ibm_jdk.installer.properties.erb" t="Include" />
+                                <e p="jdk.sh.erb" t="Include" />
+                                <e p="oracle.jinfo.erb" t="Include" />
+                              </e>
+                            </e>
+                            <e p="package.tar.gz" t="Include" />
+                          </e>
+                          <e p="ba85011b16e33463" t="Include">
+                            <e p="metadata.json" t="Include" />
+                            <e p="package" t="Include">
+                              <e p=".gitignore" t="Include" />
+                              <e p=".kitchen.yml" t="Include" />
+                              <e p="Berksfile" t="Include" />
+                              <e p="Berksfile.lock" t="Include" />
+                              <e p="CHANGELOG.md" t="Include" />
+                              <e p="CONTRIBUTING.md" t="Include" />
+                              <e p="Gemfile" t="Include" />
+                              <e p="Gemfile.lock" t="Include" />
+                              <e p="LICENSE" t="Include" />
+                              <e p="README.md" t="Include" />
+                              <e p="TESTING.md" t="Include" />
+                              <e p="attributes" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="libraries" t="Include">
+                                <e p="helpers.rb" t="Include" />
+                                <e p="matchers.rb" t="Include" />
+                              </e>
+                              <e p="metadata.json" t="Include" />
+                              <e p="metadata.rb" t="Include" />
+                              <e p="providers" t="Include">
+                                <e p="alternatives.rb" t="Include" />
+                                <e p="ark.rb" t="Include" />
+                              </e>
+                              <e p="recipes" t="Include">
+                                <e p="default.rb" t="Include" />
+                                <e p="default_java_symlink.rb" t="Include" />
+                                <e p="ibm.rb" t="Include" />
+                                <e p="ibm_tar.rb" t="Include" />
+                                <e p="openjdk.rb" t="Include" />
+                                <e p="oracle.rb" t="Include" />
+                                <e p="oracle_i386.rb" t="Include" />
+                                <e p="oracle_rpm.rb" t="Include" />
+                                <e p="purge_packages.rb" t="Include" />
+                                <e p="set_attributes_from_version.rb" t="Include" />
+                                <e p="set_java_home.rb" t="Include" />
+                                <e p="windows.rb" t="Include" />
+                              </e>
+                              <e p="resources" t="Include">
+                                <e p="alternatives.rb" t="Include" />
+                                <e p="ark.rb" t="Include" />
+                              </e>
+                              <e p="templates" t="Include">
+                                <e p="default" t="Include">
+                                  <e p="ibm_jdk.installer.properties.erb" t="Include" />
+                                  <e p="oracle.jinfo.erb" t="Include" />
+                                </e>
+                              </e>
+                            </e>
+                            <e p="package.tar.gz" t="Include" />
+                          </e>
+                          <e p="bb26054b0a32736f" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="bdfff670314dfc41" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="c66c076246844697" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="cca1b4ecb83c31e8" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="cdb213b40695f5e3" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="da479a55150391f4" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="de19f0ca086ca940" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="e067af860bc7d65f" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="e5f3a0d7cb0773a7" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="f2ec4a39b543d40a" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="f44ea47eaec2f96f" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="f7339b939266d949" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="fd284e7d90af4cfd" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                        </e>
+                      </e>
+                      <e p="ufw" t="Include">
+                        <e p="metadata.json" t="Include" />
+                        <e p="version" t="Include">
+                          <e p="0.7.4" t="Include" />
+                        </e>
+                        <e p="version-uri" t="Include">
+                          <e p="09adb591191b7426" t="Include">
+                            <e p="metadata.json" t="Include" />
+                            <e p="package" t="Include">
+                              <e p="CHANGELOG.md" t="Include" />
+                              <e p="README.md" t="Include" />
+                              <e p="attributes" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="metadata.json" t="Include" />
+                              <e p="metadata.rb" t="Include" />
+                              <e p="recipes" t="Include">
+                                <e p="databag.rb" t="Include" />
+                                <e p="default.rb" t="Include" />
+                                <e p="disable.rb" t="Include" />
+                                <e p="recipes.rb" t="Include" />
+                                <e p="securitylevel.rb" t="Include" />
+                              </e>
+                            </e>
+                            <e p="package.tar.gz" t="Include" />
+                          </e>
+                          <e p="33ba88140df01dff" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="383a650273f969ba" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="4a78b1ef4000a596" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="4be6a94f5ecb18d0" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="5cb3ba3e30074e90" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="777e81cd58a22f60" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="ed83fcc328df5192" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                        </e>
+                      </e>
+                      <e p="ulimit" t="Include">
+                        <e p="metadata.json" t="Include" />
+                        <e p="version" t="Include">
+                          <e p="0.3.2" t="Include" />
+                        </e>
+                        <e p="version-uri" t="Include">
+                          <e p="42c745c98d138fc5" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="521ff62c319d5b8c" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="64151c8e8668ebb8" t="Include">
+                            <e p="metadata.json" t="Include" />
+                            <e p="package" t="Include">
+                              <e p="CHANGELOG.md" t="Include" />
+                              <e p="README.md" t="Include" />
+                              <e p="attributes" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="definitions" t="Include">
+                                <e p="user_ulimit.rb" t="Include" />
+                              </e>
+                              <e p="metadata.json" t="Include" />
+                              <e p="metadata.rb" t="Include" />
+                              <e p="providers" t="Include">
+                                <e p="domain.rb" t="Include" />
+                                <e p="rule.rb" t="Include" />
+                              </e>
+                              <e p="recipes" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="resources" t="Include">
+                                <e p="domain.rb" t="Include" />
+                                <e p="rule.rb" t="Include" />
+                              </e>
+                              <e p="templates" t="Include">
+                                <e p="default" t="Include">
+                                  <e p="domain.erb" t="Include" />
+                                  <e p="su.erb" t="Include" />
+                                  <e p="ulimit.erb" t="Include" />
+                                </e>
+                              </e>
+                            </e>
+                            <e p="package.tar.gz" t="Include" />
+                          </e>
+                          <e p="74d0afc516d93254" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                        </e>
+                      </e>
+                      <e p="windows" t="Include">
+                        <e p="metadata.json" t="Include" />
+                        <e p="version" t="Include">
+                          <e p="1.34.6" t="Include" />
+                        </e>
+                        <e p="version-uri" t="Include">
+                          <e p="0211b1205c5fddfb" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="02c443d6d8540c71" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="03d0e67aae830d1e" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="07ff82300da82156" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="0855baed3bb4be98" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="09979a64c4f161e6" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="111a1455864983d3" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="1623eb70d152c6bb" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="1873d79abf827ea2" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="1ab03b88a8f280a1" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="1fd0f34e7b8f83f7" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="20f560fca5ab52f7" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="274cb45edaa9e99e" t="Include">
+                            <e p="metadata.json" t="Include" />
+                            <e p="package" t="Include">
+                              <e p="CHANGELOG.md" t="Include" />
+                              <e p="CONTRIBUTING" t="Include" />
+                              <e p="LICENSE" t="Include" />
+                              <e p="README.md" t="Include" />
+                              <e p="TODO.md" t="Include" />
+                              <e p="attributes" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="files" t="Include">
+                                <e p="default" t="Include">
+                                  <e p="handlers" t="Include">
+                                    <e p="windows_reboot_handler.rb" t="Include" />
+                                  </e>
+                                </e>
+                              </e>
+                              <e p="libraries" t="Include">
+                                <e p="feature_base.rb" t="Include" />
+                                <e p="matchers.rb" t="Include" />
+                                <e p="powershell_helper.rb" t="Include" />
+                                <e p="powershell_out.rb" t="Include" />
+                                <e p="registry_helper.rb" t="Include" />
+                                <e p="version.rb" t="Include" />
+                                <e p="windows_architecture_helper.rb" t="Include" />
+                                <e p="windows_helper.rb" t="Include" />
+                                <e p="windows_privileged.rb" t="Include" />
+                                <e p="wmi_helper.rb" t="Include" />
+                              </e>
+                              <e p="metadata.json" t="Include" />
+                              <e p="metadata.rb" t="Include" />
+                              <e p="providers" t="Include">
+                                <e p="auto_run.rb" t="Include" />
+                                <e p="batch.rb" t="Include" />
+                                <e p="feature_dism.rb" t="Include" />
+                                <e p="feature_powershell.rb" t="Include" />
+                                <e p="feature_servermanagercmd.rb" t="Include" />
+                                <e p="package.rb" t="Include" />
+                                <e p="pagefile.rb" t="Include" />
+                                <e p="path.rb" t="Include" />
+                                <e p="printer.rb" t="Include" />
+                                <e p="printer_port.rb" t="Include" />
+                                <e p="reboot.rb" t="Include" />
+                                <e p="registry.rb" t="Include" />
+                                <e p="shortcut.rb" t="Include" />
+                                <e p="task.rb" t="Include" />
+                                <e p="zipfile.rb" t="Include" />
+                              </e>
+                              <e p="recipes" t="Include">
+                                <e p="default.rb" t="Include" />
+                                <e p="reboot_handler.rb" t="Include" />
+                              </e>
+                              <e p="resources" t="Include">
+                                <e p="auto_run.rb" t="Include" />
+                                <e p="batch.rb" t="Include" />
+                                <e p="feature.rb" t="Include" />
+                                <e p="package.rb" t="Include" />
+                                <e p="pagefile.rb" t="Include" />
+                                <e p="path.rb" t="Include" />
+                                <e p="printer.rb" t="Include" />
+                                <e p="printer_port.rb" t="Include" />
+                                <e p="reboot.rb" t="Include" />
+                                <e p="registry.rb" t="Include" />
+                                <e p="shortcut.rb" t="Include" />
+                                <e p="task.rb" t="Include" />
+                                <e p="zipfile.rb" t="Include" />
+                              </e>
+                            </e>
+                            <e p="package.tar.gz" t="Include" />
+                          </e>
+                          <e p="284886bf926cf316" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="30ee80c99b2d14d0" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="3a0dbb305b357582" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="3bcea4a97f7e3a05" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="3f3fee8490ca24a9" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="40ac22fb44c6944f" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="41471fc085007db5" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="44545363a9d717ce" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="480b0d739b456d93" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="48141710099412a8" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="483a88228eb88ce8" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="4a9c2dcf6806d5c4" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="4c2193d7a978314b" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="4e27e91476e04c7b" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="538d2a30a7177ed6" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="554596f1c2d7efab" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="581c3f0ff858defc" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="5a1f184e3ad57673" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="5ddb13c9d0bd3d1e" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="5faab14115de40c0" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="65239ce9efb3c880" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="7073a4c439ccab56" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="769865d5f7cf9088" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="771056a6c400424a" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="87e04e1f2a459f71" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="8c1d8cbd104f0832" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="8d287604baac3628" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="8e75a3ac00a35590" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="90f17a3c31c9c77b" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="93204ad2db3dca82" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="93c11828a828a769" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="97a93bc10d82bffa" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="994d7b20c39b67cd" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="99e61396beab2d28" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="9a903cd7239447e6" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="9cb24afec2265e31" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="9ee6e034432d07ae" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="a60e8ec6ae327611" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="ab42da7c62d916ef" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="ae6a7ebd469776ae" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="af7a330e30458da8" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="b2923f3c2cb68f49" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="bd18016713ebb0c5" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="be8d2f7425fd1bf6" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="c22a8e382d61cecb" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="c94e8d6537b78cb2" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="cb84a44204826aa0" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="ccb387d9954a36c2" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="ce1a11f48bdb1809" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="cebd5832b9827fbf" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="cee49d7b57f27720" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="cfd54d9f98310055" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="d75679ec5669d474" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="d877b89a6b2a59e1" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="d8952f83a6ce7723" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="d9435aade9272738" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="dc8727f421768824" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="e24c8de6efeea844" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="e7508563a820d11c" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="e76435d0ed5bdf38" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="edee38a6ad20e7ee" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="f195ae1e823eef51" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="f1b516b4fb86b6ee" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="fb8e5e72221e0d06" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                        </e>
+                      </e>
+                      <e p="yum" t="Include">
+                        <e p="metadata.json" t="Include" />
+                        <e p="version" t="Include">
+                          <e p="3.3.2" t="Include" />
+                        </e>
+                        <e p="version-uri" t="Include">
+                          <e p="016267f800f27f98" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="07ece4da82b272ac" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="17bfac0159b7c7f8" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="27b1b74b1d8cc6ba" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="2aa4b73c32f28400" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="41fc8ae238c4694f" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="54b9b81c8e4b9065" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="553688d0925611a9" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="59423fd7ea648897" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="6209462f583b4c8b" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="6f1a2930fe2a54ce" t="Include">
+                            <e p="metadata.json" t="Include" />
+                            <e p="package" t="Include">
+                              <e p="CHANGELOG.md" t="Include" />
+                              <e p="README.md" t="Include" />
+                              <e p="attributes" t="Include">
+                                <e p="main.rb" t="Include" />
+                              </e>
+                              <e p="libraries" t="Include">
+                                <e p="matchers.rb" t="Include" />
+                              </e>
+                              <e p="metadata.json" t="Include" />
+                              <e p="metadata.rb" t="Include" />
+                              <e p="providers" t="Include">
+                                <e p="globalconfig.rb" t="Include" />
+                                <e p="repository.rb" t="Include" />
+                              </e>
+                              <e p="recipes" t="Include">
+                                <e p="default.rb" t="Include" />
+                              </e>
+                              <e p="resources" t="Include">
+                                <e p="globalconfig.rb" t="Include" />
+                                <e p="repository.rb" t="Include" />
+                              </e>
+                              <e p="templates" t="Include">
+                                <e p="default" t="Include">
+                                  <e p="main.erb" t="Include" />
+                                  <e p="repo.erb" t="Include" />
+                                </e>
+                              </e>
+                            </e>
+                            <e p="package.tar.gz" t="Include" />
+                          </e>
+                          <e p="709585e566b6df6f" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="798411e90306da73" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="7ce81e830ddbe8b9" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="7d227910aa267c47" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="9230da4a951ff46c" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="94a139de945e782c" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="a279ce5afd7f70e5" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="a88076b07805eb32" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="aef21715008cf676" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="afb1520ae19932d9" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="b37f2d4c3268dfaa" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="be8ac7a8d056e74b" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="c8769c87523efa93" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="e4ba970fdfcb91d7" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="e9b97b3cd7807f89" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="f4a78eb103c04923" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                          <e p="f8cc171c4f8f79bb" t="Include">
+                            <e p="metadata.json" t="Include" />
+                          </e>
+                        </e>
+                      </e>
+                    </e>
+                  </e>
+                </e>
+                <e p="git" t="Include">
+                  <e p="4e12f6400d8a8336" t="Include">
+                    <e p=".gitignore" t="Include" />
+                    <e p=".kitchen.yml" t="Include" />
+                    <e p="Berksfile" t="Include" />
+                    <e p="ChangeLog.md" t="Include" />
+                    <e p="Gemfile" t="Include" />
+                    <e p="README.md" t="Include" />
+                    <e p="Thorfile" t="Include" />
+                    <e p="Vagrantfile" t="Include" />
+                    <e p="attributes" t="Include">
+                      <e p="common.rb" t="Include" />
+                      <e p="datastax.rb" t="Include" />
+                      <e p="tarball.rb" t="Include" />
+                      <e p="version.rb" t="Include" />
+                    </e>
+                    <e p="chefignore" t="Include" />
+                    <e p="libraries" t="Include">
+                      <e p="config_helpers.rb" t="Include" />
+                    </e>
+                    <e p="metadata.json" t="Include" />
+                    <e p="metadata.rb" t="Include" />
+                    <e p="recipes" t="Include">
+                      <e p="datastax.rb" t="Include" />
+                      <e p="default.rb" t="Include" />
+                      <e p="opscenter_agent.rb" t="Include" />
+                      <e p="opscenter_agent_datastax.rb" t="Include" />
+                      <e p="opscenter_agent_tarball.rb" t="Include" />
+                      <e p="opscenter_server.rb" t="Include" />
+                      <e p="tarball.rb" t="Include" />
+                      <e p="user.rb" t="Include" />
+                    </e>
+                    <e p="templates" t="Include">
+                      <e p="default" t="Include">
+                        <e p="cassandra-cli.erb" t="Include" />
+                        <e p="cassandra-env.sh.erb" t="Include" />
+                        <e p="cassandra-rackdc.properties.erb" t="Include" />
+                        <e p="cassandra-topology.properties.erb" t="Include" />
+                        <e p="cassandra.yaml.erb" t="Include" />
+                        <e p="cqlsh.erb" t="Include" />
+                        <e p="debian.cassandra.init.erb" t="Include" />
+                        <e p="log4j-server.properties.erb" t="Include" />
+                        <e p="logback-tools.xml.erb" t="Include" />
+                        <e p="logback.xml.erb" t="Include" />
+                        <e p="opscenter-agent.conf.erb" t="Include" />
+                        <e p="opscenterd.conf.erb" t="Include" />
+                        <e p="rhel.cassandra.init.erb" t="Include" />
+                      </e>
+                    </e>
+                    <e p="test" t="Include">
+                      <e p="integration" t="Include">
+                        <e p="default" t="Include">
+                          <e p="serverspec" t="Include">
+                            <e p="default_spec.rb" t="Include" />
+                          </e>
+                        </e>
+                        <e p="dse" t="Include">
+                          <e p="serverspec" t="Include">
+                            <e p="dse_spec.rb" t="Include" />
+                          </e>
+                        </e>
+                        <e p="tarball" t="Include">
+                          <e p="serverspec" t="Include">
+                            <e p="tarball_spec.rb" t="Include" />
+                          </e>
+                        </e>
+                      </e>
+                    </e>
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
     </e>
   </component>
 </project>
