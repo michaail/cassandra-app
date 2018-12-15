@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 VAGRANTFILE_API_VERSION = "2"
-CASSANDRA_VERSION = "2.1.20"
+CASSANDRA_VERSION = "3.11.3"
 CHEF_VERSION = "12.22.5"
 
 BOX = "opscode_ubuntu-14.04_chef-provisionerless"

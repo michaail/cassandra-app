@@ -9,9 +9,12 @@
       <e p="cassandra" t="Include">
         <e p="Backend.cs" t="Include" />
         <e p="Models" t="Include">
-          <e p="Auditorium.cs" t="Include" />
           <e p="Movie.cs" t="Include" />
           <e p="Screening.cs" t="Include" />
+          <e p="Theater.cs" t="Include" />
+          <e p="TheaterScreening.cs" t="Include" />
+          <e p="Ticket.cs" t="Include" />
+          <e p="TicketsCounter.cs" t="Include" />
         </e>
       </e>
       <e p="cassandra-app.csproj" t="IncludeRecursive" />
@@ -24,7 +27,7 @@
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
-      <e p="schema.cql" t="Include" />
+      <e p="schema1.cql" t="Include" />
       <e p="vagrant-setup" t="Include">
         <e p=".gitignore" t="Include" />
         <e p="Cheffile" t="Include" />
