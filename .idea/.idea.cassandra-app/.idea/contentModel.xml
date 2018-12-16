@@ -12,9 +12,9 @@
           <e p="Movie.cs" t="Include" />
           <e p="Screening.cs" t="Include" />
           <e p="Theater.cs" t="Include" />
-          <e p="TheaterScreening.cs" t="Include" />
+          <e p="Theater_Screening.cs" t="Include" />
           <e p="Ticket.cs" t="Include" />
-          <e p="TicketsCounter.cs" t="Include" />
+          <e p="Tickets_Counter.cs" t="Include" />
         </e>
         <e p="Queries.cs" t="Include" />
       </e>

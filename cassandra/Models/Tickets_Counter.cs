@@ -2,17 +2,17 @@ using System;
 
 namespace cassandra_app.cassandra.Models
 {
-    public class TicketsCounter
+    public class Tickets_Counter
     {
         public Guid Movie_Id { get; set; }
         public Guid Screening_Id { get; set; }
-        public long Counter { get; set; }
+        public long Sold { get; set; }
 
-        public TicketsCounter(Guid movieId, Guid screeningId, long counter)
+        public Tickets_Counter(Guid movieId, Guid screeningId, long sold)
         {
             this.Movie_Id = movieId;
             this.Screening_Id = screeningId;
-            this.Counter = counter;
+            this.Sold = sold;
         }
     }
 }
