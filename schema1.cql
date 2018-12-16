@@ -10,13 +10,13 @@ DROP TABLE IF EXISTS cineplex.theater_screenings;
 DROP TABLE IF EXISTS cineplex.tickets;
 DROP TABLE IF EXISTS cineplex.tickets_counter;
 
-CREATE TABLE IF NOT EXISTS theaters (
+CREATE TABLE IF NOT EXISTS theater (
   id uuid,
   name text,
   PRIMARY KEY (id)
 );
 
-CREATE TABLE IF NOT EXISTS movies (
+CREATE TABLE IF NOT EXISTS movie (
   id uuid,
   title text,
   prodyear int,
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS movies (
   PRIMARY KEY ((id), title)
 );
 
-CREATE TABLE IF NOT EXISTS screenings (
+CREATE TABLE IF NOT EXISTS screening (
   id uuid,
   movie_id uuid,
   theater_id uuid,
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS screenings (
   PRIMARY KEY ((movie_id), date, time, id)
 );
 
-CREATE TABLE IF NOT EXISTS theater_screenings (
+CREATE TABLE IF NOT EXISTS theater_screening (
   id uuid,
   movie_id uuid,
   theater_id uuid,
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS theater_screenings (
 
 CREATE INDEX ON screenings (id);
 
-CREATE TABLE IF NOT EXISTS tickets (
+CREATE TABLE IF NOT EXISTS ticket (
   id timeuuid,
   screening_id uuid,
   user text,

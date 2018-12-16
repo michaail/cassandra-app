@@ -9,27 +9,27 @@ namespace cassandra_app.cassandra.Models
   public class TheaterScreening
   {
     public Guid Id { get; set; }
-    public Guid MovieId { get; set; }
-    public Guid TheaterId { get; set; }
+    public Guid Movie_Id { get; set; }
+    public Guid Theater_Id { get; set; }
 
     public LocalDate Date { get; set; }
     public LocalTime Time { get; set; }
 
     public string Hall { get; set; }
-    public int HallCapacity { get; set; }
+    public int Hall_Capacity { get; set; }
 
     public TheaterScreening(Guid id, Guid movieId, Guid theaterId, LocalDate date, LocalTime time, string hall,
       int hallCapacity)
     {
       this.Id = id;
-      this.MovieId = movieId;
-      this.TheaterId = theaterId;
+      this.Movie_Id = movieId;
+      this.Theater_Id = theaterId;
 
       this.Date = date;
       this.Time = time;
 
       this.Hall = hall;
-      this.HallCapacity = hallCapacity;
+      this.Hall_Capacity = hallCapacity;
     }
   }
 }
