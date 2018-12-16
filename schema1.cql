@@ -3,11 +3,11 @@ CREATE KEYSPACE if NOT EXISTS cineplex
 
 USE cineplex;
 
-DROP TABLE IF EXISTS cineplex.theaters;
-DROP TABLE IF EXISTS cineplex.movies;
-DROP TABLE IF EXISTS cineplex.screenings;
-DROP TABLE IF EXISTS cineplex.theater_screenings;
-DROP TABLE IF EXISTS cineplex.tickets;
+DROP TABLE IF EXISTS cineplex.theater;
+DROP TABLE IF EXISTS cineplex.movie;
+DROP TABLE IF EXISTS cineplex.screening;
+DROP TABLE IF EXISTS cineplex.theater_screening;
+DROP TABLE IF EXISTS cineplex.ticket;
 DROP TABLE IF EXISTS cineplex.tickets_counter;
 
 CREATE TABLE IF NOT EXISTS theater (
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS theater_screening (
   PRIMARY KEY ((movie_id, theater_id), date, time, id)
 );
 
-CREATE INDEX ON screenings (id);
+CREATE INDEX ON screening (id);
 
 CREATE TABLE IF NOT EXISTS ticket (
   id timeuuid,
@@ -102,3 +102,28 @@ INSERT INTO movie (id, title, prodyear, description, duration)
   VALUES  (1f4b7f51-e909-4954-82cd-b5a33b4d0e88, 'Blues Brothers', 1980, 'Blues Brothers', 133);
 
 
+INSERT INTO screening (id, movie_id, theater_id, date, time, hall, hall_capacity) 
+  VALUES (9e1b8d2b-85f3-44fb-acda-bfdd64b84532, 03ff10fc-6e00-4ddf-a768-199e8a316ce1, cf340926-d925-4820-abed-49db9f07d7ac, '2018-12-20', '20:00:00', 'A', 200);
+   
+INSERT INTO screening (id, movie_id, theater_id, date, time, hall, hall_capacity) 
+  VALUES (d2b2f48d-febb-4997-91fc-9cc752193210, 03ff10fc-6e00-4ddf-a768-199e8a316ce1, cf340926-d925-4820-abed-49db9f07d7ac, '2018-12-21', '20:00:00', 'A', 200);
+   
+INSERT INTO screening (id, movie_id, theater_id, date, time, hall, hall_capacity) 
+  VALUES (9e69e236-da80-472d-980a-323608a118c6, 4134c8a0-6d7b-4526-af09-de63f078d200, cf340926-d925-4820-abed-49db9f07d7ac, '2018-12-21', '20:00:00', 'B', 1000);
+   
+INSERT INTO screening (id, movie_id, theater_id, date, time, hall, hall_capacity) 
+  VALUES (c5ca95db-cd92-4e80-845a-8dfd3686dfe1, 4134c8a0-6d7b-4526-af09-de63f078d200, cf340926-d925-4820-abed-49db9f07d7ac, '2018-12-20', '20:00:00', 'B', 1000);
+   
+INSERT INTO screening (id, movie_id, theater_id, date, time, hall, hall_capacity) 
+  VALUES (9011f141-565d-48bf-a20b-30c79cf979ef, 9858655d-a03f-479b-b2ba-02035f88a076, e150983c-b83b-4569-a0e1-8c2a74f1b6ef, '2018-12-20', '18:00:00', 'A', 3000);
+   
+INSERT INTO screening (id, movie_id, theater_id, date, time, hall, hall_capacity) 
+  VALUES (6900c782-3400-4c46-bff0-5b49f0c118bd, 9858655d-a03f-479b-b2ba-02035f88a076, e150983c-b83b-4569-a0e1-8c2a74f1b6ef, '2018-12-21', '18:00:00', 'A', 3000);
+   
+INSERT INTO screening (id, movie_id, theater_id, date, time, hall, hall_capacity) 
+  VALUES (77b9357b-5151-4dd3-b871-e4afa0c83b06, f82a26c2-8c00-457e-be79-7801de327bd4, e150983c-b83b-4569-a0e1-8c2a74f1b6ef, '2018-12-20', '21:00:00', 'A', 3000);
+   
+INSERT INTO screening (id, movie_id, theater_id, date, time, hall, hall_capacity) 
+  VALUES (019621dd-5a1d-40fd-ad03-652e65fd5b8f, f82a26c2-8c00-457e-be79-7801de327bd4, e150983c-b83b-4569-a0e1-8c2a74f1b6ef, '2018-12-21', '20:00:00', 'B', 300);
+
+   

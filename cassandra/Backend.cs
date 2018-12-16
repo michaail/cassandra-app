@@ -30,7 +30,7 @@ namespace cassandra_app.cassandra
 
             GetAllMovies();
 
-            GetMovie(Guid.Parse("1871dc17-2216-4be1-b50c-d8cd89362e24"));
+            
 
         }
 

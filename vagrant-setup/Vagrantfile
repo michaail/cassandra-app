@@ -9,7 +9,7 @@ BOX = "opscode_ubuntu-14.04_chef-provisionerless"
 BOX_URL = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-14.04_chef-provisionerless.box"
 
 INSTANCES = 3
-MEMORY = 512
+MEMORY = 1024
 DOMAIN = "example.org"
 SUBNET = "192.168.200"
 CLUSTER_NAME = "Test Cluster"

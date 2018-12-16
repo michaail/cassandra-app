@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3e9a21b6-b69c-4451-bf3d-93172dae13aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.cassandra-app/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.cassandra-app/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cassandra/Models/Movie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cassandra/Models/Movie.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cassandra/Queries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cassandra/Runner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schema1.cql" beforeDir="false" afterPath="$PROJECT_DIR$/schema1.cql" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-520988194">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.30" value="2" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.40" value="1" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.55" value="1" />
+          <entry key="project.opened" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Cheffile" value="1" />
+          <entry key="Vagrantfile" value="2" />
+          <entry key="chef" value="1" />
+          <entry key="cql" value="6" />
+          <entry key="cs" value="28" />
+          <entry key="gitignore" value="1" />
+          <entry key="sln" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="28" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="SQL" value="6" />
+          <entry key="Solution File" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Cheffile" value="5" />
+          <entry key="Vagrantfile" value="5" />
+          <entry key="cql" value="1747" />
+          <entry key="cs" value="5740" />
+          <entry key="txt" value="210" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C#" value="5740" />
+          <entry key="PLAIN_TEXT" value="220" />
+          <entry key="SQL" value="1747" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cassandra/Models/Tickets_Counter.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <folding>
+                <marker date="1544980330440" expanded="true" signature="90:438" ph="{...}" />
+                <marker date="1544980330440" expanded="true" signature="300:432" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/schema1.cql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="685">
+              <caret line="129" column="3" lean-forward="true" selection-start-line="129" selection-start-column="3" selection-end-line="129" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cassandra/Models/Theater_Screening.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding>
+                <marker date="1544976572679" expanded="false" signature="6:93" ph="..." />
+                <marker date="1544976572679" expanded="true" signature="204:838" ph="{...}" />
+                <marker date="1544976572679" expanded="true" signature="621:834" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cassandra/Backend.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="216" column="9" selection-start-line="216" selection-start-column="9" selection-end-line="216" selection-end-column="9" />
+              <folding>
+                <marker date="1544994593281" expanded="false" signature="6:240" ph="..." />
+                <marker date="1544994593281" expanded="true" signature="275:5950" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="302:5948" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="485:816" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="861:990" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="1040:1368" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="1105:1181" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="1213:1318" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="1422:1761" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="1491:1571" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="1603:1710" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="1819:2171" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="1892:1976" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="2008:2117" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="2211:2536" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="2262:2363" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="2395:2499" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="2584:2933" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="2643:2752" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="2784:2892" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="3032:3462" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="3105:3287" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="3319:3420" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="3516:3863" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="3566:3701" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="3733:3826" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="3928:4442" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="4035:4092" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="4150:4265" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="4297:4403" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="4537:4918" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="4995:5668" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="5134:5192" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="5358:5500" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="5532:5630" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="5697:5924" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="5723:5795" ph="{...}" />
+                <marker date="1544994593281" expanded="true" signature="5827:5901" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cassandra/Runner.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+              <folding>
+                <marker date="1544999455503" expanded="true" signature="33:166" ph="{...}" />
+                <marker date="1544999455503" expanded="true" signature="59:164" ph="{...}" />
+                <marker date="1544999455503" expanded="true" signature="125:158" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cassandra/Models/Ticket.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+              <folding>
+                <marker date="1544968844695" expanded="false" signature="6:30" ph="..." />
+                <marker date="1544968844695" expanded="true" signature="98:547" ph="{...}" />
+                <marker date="1544968844695" expanded="true" signature="380:541" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cassandra/Models/Theater.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+              <folding>
+                <marker date="1544895262391" expanded="true" signature="60:97" ph="///  ... " />
+                <marker date="1544895262391" expanded="true" signature="120:296" ph="{...}" />
+                <marker date="1544895262391" expanded="true" signature="236:292" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cassandra/Models/Screening.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+              <folding>
+                <marker date="1544968739709" expanded="false" signature="6:93" ph="..." />
+                <marker date="1544968739709" expanded="true" signature="194:828" ph="{...}" />
+                <marker date="1544968739709" expanded="true" signature="611:824" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vagrant-setup/Vagrantfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cassandra/Models/Movie.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+              <folding>
+                <marker date="1544965543900" expanded="false" signature="6:49" ph="..." />
+                <marker date="1544965543900" expanded="true" signature="117:565" ph="{...}" />
+                <marker date="1544965543900" expanded="true" signature="401:561" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/cassandra/Models/Ticket.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cassandra/Runner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cassandra/Models/Movie.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cassandra/Models/Screening.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cassandra/Models/Theater_Screening.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cassandra/Backend.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cassandra/Models/Theater.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cassandra/Models/Tickets_Counter.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/vagrant-cassandra/Cheffile" />
+        <option value="$PROJECT_DIR$/vagrant-cassandra/Vagrantfile" />
+        <option value="$PROJECT_DIR$/Program.cs" />
+        <option value="$PROJECT_DIR$/cassandra/Models/Auditorium.cs" />
+        <option value="$PROJECT_DIR$/schema.cql" />
+        <option value="$PROJECT_DIR$/cassandra/Models/Theater.cs" />
+        <option value="$PROJECT_DIR$/cassandra/Models/Reservation.cs" />
+        <option value="$PROJECT_DIR$/cassandra/Queries.cs" />
+        <option value="$PROJECT_DIR$/cassandra/Models/Movies.cs" />
+        <option value="$PROJECT_DIR$/cassandra/Models/Movie.cs" />
+        <option value="$PROJECT_DIR$/cassandra/Models/Screening.cs" />
+        <option value="$PROJECT_DIR$/cassandra/Models/TheaterScreening.cs" />
+        <option value="$PROJECT_DIR$/cassandra/Models/Ticket.cs" />
+        <option value="$PROJECT_DIR$/cassandra/Models/TicketsCounter.cs" />
+        <option value="$PROJECT_DIR$/cassandra/Models/Theater_Screening.cs" />
+        <option value="$PROJECT_DIR$/cassandra/Models/Tickets_Counter.cs" />
+        <option value="$PROJECT_DIR$/cassandra/Backend.cs" />
+        <option value="$PROJECT_DIR$/cassandra/Runner.cs" />
+        <option value="$PROJECT_DIR$/schema1.cql" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="y" value="27" />
+    <option name="width" value="1095" />
+    <option name="height" value="988" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="cassandra-app" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="cassandra-app" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="cassandra-app" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="cassandra-app" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="cassandra-app" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="cassandra" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="true" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.CSharpInteractiveConfiguration" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/cassandra-app.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <envs>
+        <env name="ASPNETCORE_ENVIRONMENT" value="Development" />
+        <env name="ASPNETCORE_URLS" value="http://localhost:5000" />
+      </envs>
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/cassandra-app.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.1" />
+      <browser url="http://localhost:5000" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e9a21b6-b69c-4451-bf3d-93172dae13aa" name="Default Changelist" comment="" />
+      <created>1543517210748</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543517210748</updated>
+      <workItem from="1543517216697" duration="1674000" />
+      <workItem from="1544529509886" duration="5385000" />
+      <workItem from="1544553616490" duration="10537000" />
+      <workItem from="1544710009020" duration="103000" />
+      <workItem from="1544727990338" duration="616000" />
+      <workItem from="1544874147303" duration="13358000" />
+      <workItem from="1544914703007" duration="5538000" />
+      <workItem from="1544955300023" duration="8658000" />
+      <workItem from="1544967889306" duration="12115000" />
+      <workItem from="1544988557434" duration="6140000" />
+      <workItem from="1544998776564" duration="2523000" />
+    </task>
+    <task id="LOCAL-00001" summary="vagrant &amp; models">
+      <created>1544564168331</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544564168331</updated>
+    </task>
+    <task id="LOCAL-00002" summary="vagrant &amp; models">
+      <created>1544564482014</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544564482014</updated>
+    </task>
+    <task id="LOCAL-00003" summary="cql schema mockup">
+      <created>1544574327476</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544574327487</updated>
+    </task>
+    <task id="LOCAL-00004" summary="vagrant &amp; models">
+      <created>1544574536854</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1544574536854</updated>
+    </task>
+    <task id="LOCAL-00005" summary="vagrant &amp; models">
+      <created>1544574771864</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544574771864</updated>
+    </task>
+    <task id="LOCAL-00006" summary="p">
+      <created>1544574968118</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1544574968118</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changed domain, Created models, cassandra schema">
+      <created>1544898901181</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1544898901182</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Building statements ... &amp; reduced memory">
+      <created>1544921150189</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1544921150189</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changed models to match mapper">
+      <created>1544969143905</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1544969143905</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Methods">
+      <created>1544982485314</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1544982485314</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Completed methods &amp; some inserts in schema">
+      <created>1544995311742</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1544995311743</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="66647000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1095" height="988" extended-state="4" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20019066" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30697674" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32919955" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.22660653" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32906976" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="14" weight="0.2860465" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33773088" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30697674" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32919955" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.22660653" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32906976" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="14" weight="0.2860465" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/vagrant-cassandra" />
+      <path value="$PROJECT_DIR$/vagrant-cassandra/chef/cookbooks/cassandra" />
+      <path value="$PROJECT_DIR$/vagrant-cassandra/tmp/librarian/cache/source/git/4e12f6400d8a8336" />
+      <path value="$PROJECT_DIR$/vagrant-cassandra/vagrant/cookbooks/cassandra" />
+      <path value="$PROJECT_DIR$/vagrant-cassandra/vagrant/tmp/librarian/cache/source/git/d32dbffabe3ed3cf" />
+      <path value="$PROJECT_DIR$/vagrant-setup/chef/cookbooks/cassandra" />
+      <path value="$PROJECT_DIR$/vagrant-setup/tmp/librarian/cache/source/git/4e12f6400d8a8336" />
+    </ignored-roots>
+    <MESSAGE value="vagrant&#10;models" />
+    <MESSAGE value="cql schema mockup" />
+    <MESSAGE value="vagrant &amp; models" />
+    <MESSAGE value="p" />
+    <MESSAGE value="Changed domain, Created models, cassandra schema" />
+    <MESSAGE value="Building statements ... &amp; reduced memory" />
+    <MESSAGE value="Changed models to match mapper" />
+    <MESSAGE value="Methods" />
+    <MESSAGE value="Completed methods &amp; some inserts in schema" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed methods &amp; some inserts in schema" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/vagrant-setup/Cheffile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vagrant-setup/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cassandra/Models/Auditorium.cs" />
+    <entry file="file://$PROJECT_DIR$/cassandra/Controllers/Car.cs" />
+    <entry file="file://$PROJECT_DIR$/schema.cql" />
+    <entry file="file://$PROJECT_DIR$/vagrant-setup/Vagrantfile.chef">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cassandra-app.sln">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cassandra/Models/Tickets_Counter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <marker date="1544980330440" expanded="true" signature="90:438" ph="{...}" />
+            <marker date="1544980330440" expanded="true" signature="300:432" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cassandra/Models/Theater_Screening.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <marker date="1544976572679" expanded="false" signature="6:93" ph="..." />
+            <marker date="1544976572679" expanded="true" signature="204:838" ph="{...}" />
+            <marker date="1544976572679" expanded="true" signature="621:834" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cassandra/Models/Ticket.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <marker date="1544968844695" expanded="false" signature="6:30" ph="..." />
+            <marker date="1544968844695" expanded="true" signature="98:547" ph="{...}" />
+            <marker date="1544968844695" expanded="true" signature="380:541" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cassandra/Models/Theater.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding>
+            <marker date="1544895262391" expanded="true" signature="60:97" ph="///  ... " />
+            <marker date="1544895262391" expanded="true" signature="120:296" ph="{...}" />
+            <marker date="1544895262391" expanded="true" signature="236:292" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cassandra/Models/Screening.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding>
+            <marker date="1544968739709" expanded="false" signature="6:93" ph="..." />
+            <marker date="1544968739709" expanded="true" signature="194:828" ph="{...}" />
+            <marker date="1544968739709" expanded="true" signature="611:824" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vagrant-setup/Vagrantfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cassandra/Models/Movie.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <marker date="1544965543900" expanded="false" signature="6:49" ph="..." />
+            <marker date="1544965543900" expanded="true" signature="117:565" ph="{...}" />
+            <marker date="1544965543900" expanded="true" signature="401:561" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cassandra/Backend.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="216" column="9" selection-start-line="216" selection-start-column="9" selection-end-line="216" selection-end-column="9" />
+          <folding>
+            <marker date="1544994593281" expanded="false" signature="6:240" ph="..." />
+            <marker date="1544994593281" expanded="true" signature="275:5950" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="302:5948" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="485:816" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="861:990" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="1040:1368" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="1105:1181" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="1213:1318" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="1422:1761" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="1491:1571" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="1603:1710" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="1819:2171" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="1892:1976" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="2008:2117" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="2211:2536" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="2262:2363" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="2395:2499" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="2584:2933" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="2643:2752" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="2784:2892" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="3032:3462" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="3105:3287" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="3319:3420" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="3516:3863" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="3566:3701" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="3733:3826" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="3928:4442" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="4035:4092" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="4150:4265" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="4297:4403" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="4537:4918" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="4995:5668" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="5134:5192" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="5358:5500" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="5532:5630" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="5697:5924" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="5723:5795" ph="{...}" />
+            <marker date="1544994593281" expanded="true" signature="5827:5901" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cassandra/Queries.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cassandra/Runner.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding>
+            <marker date="1544999455503" expanded="true" signature="33:166" ph="{...}" />
+            <marker date="1544999455503" expanded="true" signature="59:164" ph="{...}" />
+            <marker date="1544999455503" expanded="true" signature="125:158" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/schema1.cql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="129" column="3" lean-forward="true" selection-start-line="129" selection-start-column="3" selection-end-line="129" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
