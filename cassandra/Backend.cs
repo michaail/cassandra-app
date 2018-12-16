@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.WebSockets;
 using System.Runtime.CompilerServices;
 using Cassandra;
 using cassandra_app.cassandra.Models;
@@ -15,14 +16,7 @@ namespace cassandra_app.cassandra
 
         private ISession session;
 
-//        private PreparedStatement _getAllTheaters, _getAllMovies, _getAllScreenings, _getTickets;
-//        private PreparedStatement _getTicketsCounters;
-//        private PreparedStatement _getMovie, _getScreening;
-//        private PreparedStatement _getScreeningsOfMovie, _getTheaterScreenings;
-//        private PreparedStatement _getSoldTicketsCount;
-//        private PreparedStatement _buyTicket, _updateTicketCounter;
-//        private PreparedStatement _addMovie, _addTheater, _addScreening, _addTheaterScreening;
-
+        private PreparedStatement _updateCounter;
         private IMapper mapper;
 
         public Backend()
@@ -33,43 +27,16 @@ namespace cassandra_app.cassandra
 
             session = cluster.Connect("cineplex");
             mapper = new Mapper(session);
-                
-//            InitializeStatements();
 
             GetAllMovies();
 
             GetMovie(Guid.Parse("1871dc17-2216-4be1-b50c-d8cd89362e24"));
 
-
         }
 
         private void InitializeStatements()
         {
-//            _getAllTheaters = session.Prepare("SELECT * FROM theaters");
-//            _getAllMovies = session.Prepare("SELECT * FROM movies");
-//            _getAllScreenings = session.Prepare("SELECT * FROM screenings");
-//
-//            _getTickets = session.Prepare("SELECT * FROM tickets WHERE screening_id=? LIMIT ?");
-//            _getTicketsCounters = session.Prepare("SELECT * FROM tickets_counter");
-//            _getMovie = session.Prepare("SELECT * FROM movies WHERE id=?");
-//            _getScreening = session.Prepare("SELECT * FROM screenings WHERE id=?");
-//            _getScreeningsOfMovie = session.Prepare("SELECT * FROM screenings WHERE movie_id=? AND date=?");
-//            _getTheaterScreenings = session.Prepare("SELECT * FROM theater_screenings " +
-//                                                    "WHERE movie_id=? AND date=? AND theater_id=?");
-//            _getSoldTicketsCount = session.Prepare("SELECT sold, screening_id FROM tickets_counter " +
-//                                                   "WHERE screening_id=?");
-//            _buyTicket = session.Prepare("INSERT INTO tickets (screening_id, id, user, timestamp) VALUES (?, ?, ?, ?)");
-//            _updateTicketCounter = session.Prepare("UPDATE tickets_counter SET sold=sold+1 WHERE screening_id=?");
-//            _addMovie = session.Prepare("INSERT INTO movies (id, title, prodyear, description, duration) " +
-//                                        "VALUES (uuid(), ?, ?, ?, ?");
-//            _addTheater = session.Prepare("INSERT INTO theaters (id, name) VALUES (uuid(), ?)");
-//            _addScreening = session.Prepare(
-//                "INSERT INTO screenings (id, movie_id, theater_id, date, time, hall, hall_capacity) " +
-//                "VALUES (uuid(), ?, ?, ?, ?, ?, ?)");
-//            _addTheaterScreening = session.Prepare(
-//                "INSERT INTO theater_screenings (id, movie_id, theater_id, date, time, hall, hall_capacity) " +
-//                "VALUES (?, ?, ?, ?, ?, ?, ?)");
-
+            _updateCounter = session.Prepare("UPDATE tickets_counter SET sold=sold+1 WHERE screening_id=?");
         }
 
         public IEnumerable<Movie> GetAllMovies()
@@ -197,13 +164,15 @@ namespace cassandra_app.cassandra
             IEnumerable<Ticket> tickets;
             try
             {
-                //TODO
-                tickets = mapper.Fetch<Ticket>("WHERE screening_id = ? AND date = ? AND ");
+                tickets = mapper.Fetch<Ticket>("WHERE screening_id = ?", screeningId);
             }
             catch (Exception e)
             {
+                tickets = null;
                 Console.WriteLine(e.Message);
             }
+
+            return tickets;
         }
 
         public void InsertMovie(string title, string description, int duration, int prodYear)
@@ -221,20 +190,40 @@ namespace cassandra_app.cassandra
         public bool BuyTicket(Guid screeningId, string user)
         {
             Screening screening = GetScreening(screeningId);
-
+            bool result = false;
             if (screening == null)
             {
                 return false;
             }
 
+            Ticket ticket = new Ticket(TimeUuid.NewId(), screening.Id, user, DateTimeOffset.Now);
+            var statement = _updateCounter.Bind();
             try
             {
-
+                mapper.Insert(ticket);
+                session.Execute(statement);
+                result = true;
             }
             catch (Exception e)
             {
+                result = false;
                 Console.WriteLine(e);
             }
+
+            return result;
+        }
+
+        public void Close()
+        {
+            try
+            {
+                session.Cluster.Shutdown();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
         }
         
         

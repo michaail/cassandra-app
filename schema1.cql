@@ -63,3 +63,42 @@ CREATE TABLE IF NOT EXISTS tickets_counter (
   sold counter,
   PRIMARY KEY ((movie_id), screening_id)
 );
+
+INSERT INTO theater (id, name) VALUES (cf340926-d925-4820-abed-49db9f07d7ac, 'Apollo');
+INSERT INTO theater (id, name) VALUES (e150983c-b83b-4569-a0e1-8c2a74f1b6ef, 'Rialto');
+INSERT INTO theater (id, name) VALUES (910d0199-3d1f-4d01-8ccd-6e6ba127b32e, 'Muza');
+INSERT INTO theater (id, name) VALUES (3af63abb-4140-4480-b0b8-c9339f1f8ab6, 'NH');
+INSERT INTO theater (id, name) VALUES (105653f8-5802-45d3-8dd9-892fc79662b3, 'Palacowe');
+
+
+INSERT INTO movie (id, title, prodyear, description, duration)
+  VALUES  (03ff10fc-6e00-4ddf-a768-199e8a316ce1, 'Jaws', 1975, 'Movie about sharks', 124);
+  
+INSERT INTO movie (id, title, prodyear, description, duration)
+  VALUES  (8be2acac-541b-4f1e-8d52-cb0cfb6b3c4b, 'Kursk', 2018, 'Russian submarine', 117);
+
+INSERT INTO movie (id, title, prodyear, description, duration)
+  VALUES  (4134c8a0-6d7b-4526-af09-de63f078d200, 'Godfather', 1972, 'Mafia classic', 175);
+  
+INSERT INTO movie (id, title, prodyear, description, duration)
+  VALUES  (4b304bed-dfc9-4e4f-8e9f-12279b5f24b4, 'Blade Runner', 1982, 'Blade Runner', 118);
+  
+INSERT INTO movie (id, title, prodyear, description, duration)
+  VALUES  (9858655d-a03f-479b-b2ba-02035f88a076, 'La Grande Bellezza', 2013, 'Author life', 144);
+  
+INSERT INTO movie (id, title, prodyear, description, duration)
+  VALUES  (f82a26c2-8c00-457e-be79-7801de327bd4, 'Drive', 2011, 'He just drives', 100);
+  
+INSERT INTO movie (id, title, prodyear, description, duration)
+  VALUES  (c533ed41-5e04-4fcc-b516-657fe7339359, 'Baby Driver', 2017, 'Was he slow?', 113);
+
+INSERT INTO movie (id, title, prodyear, description, duration)
+  VALUES  (82207f8b-21ba-472b-ad40-dfa447cdbfb3, 'Fantastic Mr. Fox', 2009, 'Movie about sharks', 87);
+  
+INSERT INTO movie (id, title, prodyear, description, duration)
+  VALUES  (61304204-6d50-4886-81f0-1b536341aa84, 'Senna', 2010, 'Best driver ever', 104);
+  
+INSERT INTO movie (id, title, prodyear, description, duration)
+  VALUES  (1f4b7f51-e909-4954-82cd-b5a33b4d0e88, 'Blues Brothers', 1980, 'Blues Brothers', 133);
+
+
