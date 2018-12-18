@@ -6,30 +6,30 @@ using Cassandra;
 namespace cassandra_app.cassandra.Models
 {
   // On DB primary key is ResID
-  public class Screening
-  {
-    public Guid Id { get; set; }
-    public Guid Movie_Id { get; set; }
-    public Guid Theater_Id { get; set; }
-    
-    public LocalDate Date { get; set; }
-    public LocalTime Time { get; set; }
-    
-    public string Hall { get; set; }
-    public int Hall_Capacity { get; set; }
-
-    public Screening(Guid id, Guid movieId, Guid theaterId, LocalDate date, LocalTime time, string hall,
-      int hallCapacity)
+    public class Screening
     {
-      this.Id = id;
-      this.Movie_Id = movieId;
-      this.Theater_Id = theaterId;
+        public Guid Id { get; set; }
+        public Guid Movie_Id { get; set; }
+        public Guid Theater_Id { get; set; }
+    
+        public LocalDate Date { get; set; }
+        public LocalTime Time { get; set; }
+    
+        public string Hall { get; set; }
+        public int Hall_Capacity { get; set; }
 
-      this.Date = date;
-      this.Time = time;
+        public Screening(Guid id, Guid movieId, Guid theaterId, LocalDate date, LocalTime time, string hall,
+            int hallCapacity)
+        {
+            this.Id = id;
+            this.Movie_Id = movieId;
+            this.Theater_Id = theaterId;
 
-      this.Hall = hall;
-      this.Hall_Capacity = hallCapacity;
+            this.Date = date;
+            this.Time = time;
+
+            this.Hall = hall;
+            this.Hall_Capacity = hallCapacity;
+        }
     }
-  }
 }

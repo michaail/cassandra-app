@@ -16,7 +16,8 @@ namespace cassandra_app.cassandra
 
         private ISession session;
 
-        private PreparedStatement _updateCounter;
+        private PreparedStatement _incrementCounter, _decrementCounter;
+        private PreparedStatement _deleteTicket;
         private IMapper mapper;
 
         public Backend()
@@ -27,16 +28,25 @@ namespace cassandra_app.cassandra
 
             session = cluster.Connect("cineplex");
             mapper = new Mapper(session);
+            InitializeStatements();
 
-            GetAllMovies();
+            bool res;
+            // bool res = BuyTicket(Guid.Parse("9e1b8d2b-85f3-44fb-acda-bfdd64b84532"), "galeo");
+            // Console.WriteLine(res);
 
-            
+            res = DeleteTicket(Guid.Parse("9e1b8d2b-85f3-44fb-acda-bfdd64b84532"), 
+                Guid.Parse("67dcd76c-020d-11e9-8a31-ae2f169ca2f5"));
+            Console.WriteLine(res);
 
+            Close();
         }
 
         private void InitializeStatements()
         {
-            _updateCounter = session.Prepare("UPDATE tickets_counter SET sold=sold+1 WHERE screening_id=?");
+            _incrementCounter = session.Prepare("UPDATE tickets_counter SET sold=sold+1 WHERE screening_id = ? AND movie_id = ?");
+            _decrementCounter = session.Prepare("UPDATE tickets_counter SET sold=sold-1 WHERE screening_id = ? AND movie_id = ?");
+
+            _deleteTicket = session.Prepare("DELETE FROM ticket WHERE screening_id = ? AND id = ?");
         }
 
         public IEnumerable<Movie> GetAllMovies()
@@ -175,6 +185,23 @@ namespace cassandra_app.cassandra
             return tickets;
         }
 
+        public Ticket GetTicket(Guid ticketId, Guid screeningId)
+        {
+            Ticket ticket;
+            try
+            {
+                ticket = mapper.Fetch<Ticket>("WHERE id = ? AND screening_id = ?", 
+                    ticketId, screeningId).First();
+            }
+            catch (Exception e)
+            {
+                ticket = null;
+                Console.WriteLine(e.Message);
+            }
+
+            return ticket;
+        }
+
         public void InsertMovie(string title, string description, int duration, int prodYear)
         {
             Guid movieId = Guid.NewGuid();
@@ -186,18 +213,16 @@ namespace cassandra_app.cassandra
             
         }
 
-        //TODO
         public bool BuyTicket(Guid screeningId, string user)
         {
             Screening screening = GetScreening(screeningId);
-            bool result = false;
             if (screening == null)
-            {
                 return false;
-            }
+            
+            bool result = false;
 
-            Ticket ticket = new Ticket(TimeUuid.NewId(), screening.Id, user, DateTimeOffset.Now);
-            var statement = _updateCounter.Bind();
+            Ticket ticket = new Ticket(TimeUuid.NewId(), screeningId, user, DateTimeOffset.Now);
+            var statement = _incrementCounter.Bind(screeningId, screening.Movie_Id);
             try
             {
                 mapper.Insert(ticket);
@@ -210,6 +235,35 @@ namespace cassandra_app.cassandra
                 Console.WriteLine(e);
             }
 
+            return result;
+        }
+
+        public bool DeleteTicket(Guid screeningId, Guid ticketId)
+        {
+            Screening screening = GetScreening(screeningId);
+            if (screening == null)
+                return false;
+            
+            bool result = false;
+
+            Ticket ticket = GetTicket(ticketId, screeningId);
+            if (ticket == null)
+                return false;
+
+            var decrementStatement = _decrementCounter.Bind(screeningId, screening.Movie_Id);
+            var deleteStatement = _deleteTicket.Bind(screeningId, ticketId);
+            try
+            {
+                session.Execute(deleteStatement);
+                session.Execute(decrementStatement);
+                result = true;
+            }
+            catch (Exception e)
+            {
+                result = false;
+                Console.WriteLine(e.Message);
+            }
+            
             return result;
         }
 

@@ -8,7 +8,7 @@ namespace cassandra_app.cassandra
         {
             backend = new Backend();
 
-            
+            backend.GetAllMovies();
         }
     }
 }

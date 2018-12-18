@@ -1,5 +1,6 @@
 using System;
 using Cassandra;
+using Cassandra.Mapping;
 
 namespace cassandra_app.cassandra.Models
 {
