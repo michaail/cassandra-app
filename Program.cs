@@ -8,7 +8,8 @@ namespace cassandra_app
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Backend be = new Backend();
+            Runner r = new Runner();
+            r.Stress();
         }
     }
 }

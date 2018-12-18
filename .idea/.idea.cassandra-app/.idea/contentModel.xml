@@ -17,6 +17,9 @@
           <e p="Tickets_Counter.cs" t="Include" />
         </e>
         <e p="Runner.cs" t="Include" />
+        <e p="movies.txt" t="Include" />
+        <e p="screenings.txt" t="Include" />
+        <e p="theaters.txt" t="Include" />
       </e>
       <e p="cassandra-app.csproj" t="IncludeRecursive" />
       <e p="cassandra-app.sln" t="IncludeFlat" />

@@ -13,9 +13,7 @@ namespace cassandra_app.cassandra
     public class Backend
     {
         private Cluster cluster;
-
         private ISession session;
-
         private PreparedStatement _incrementCounter, _decrementCounter;
         private PreparedStatement _deleteTicket;
         private IMapper mapper;
@@ -30,15 +28,16 @@ namespace cassandra_app.cassandra
             mapper = new Mapper(session);
             InitializeStatements();
 
-            bool res;
-            // bool res = BuyTicket(Guid.Parse("9e1b8d2b-85f3-44fb-acda-bfdd64b84532"), "galeo");
+            // GetAllMovies();
+            // bool res;
+            // // bool res = BuyTicket(Guid.Parse("9e1b8d2b-85f3-44fb-acda-bfdd64b84532"), "galeo");
+            // // Console.WriteLine(res);
+
+            // res = DeleteTicket(Guid.Parse("9e1b8d2b-85f3-44fb-acda-bfdd64b84532"), 
+            //     Guid.Parse("67dcd76c-020d-11e9-8a31-ae2f169ca2f5"));
             // Console.WriteLine(res);
 
-            res = DeleteTicket(Guid.Parse("9e1b8d2b-85f3-44fb-acda-bfdd64b84532"), 
-                Guid.Parse("67dcd76c-020d-11e9-8a31-ae2f169ca2f5"));
-            Console.WriteLine(res);
-
-            Close();
+            // Close();
         }
 
         private void InitializeStatements()
@@ -49,7 +48,7 @@ namespace cassandra_app.cassandra
             _deleteTicket = session.Prepare("DELETE FROM ticket WHERE screening_id = ? AND id = ?");
         }
 
-        public IEnumerable<Movie> GetAllMovies()
+        public List<Movie> GetAllMovies()
         {
             IEnumerable<Movie> movies;
             try
@@ -60,12 +59,13 @@ namespace cassandra_app.cassandra
             {
                 movies = null;
                 Console.WriteLine(e.Message);
+                return null;
             }
             
-            return movies;
+            return movies.ToList();
         }
 
-        public IEnumerable<Theater> GetAllTheaters()
+        public List<Theater> GetAllTheaters()
         {
             IEnumerable<Theater> theaters;
             try
@@ -76,12 +76,13 @@ namespace cassandra_app.cassandra
             {
                 theaters = null;
                 Console.WriteLine(e.Message);
+                return null;
             }
            
-            return theaters;
+            return theaters.ToList();
         }
 
-        public IEnumerable<Screening> GetAllScreenings()
+        public List<Screening> GetAllScreenings()
         {
             IEnumerable<Screening> screenings;
             try
@@ -92,9 +93,27 @@ namespace cassandra_app.cassandra
             {
                 screenings = null;
                 Console.WriteLine(e.Message);
+                return null;
             }
             
-            return screenings;
+            return screenings.ToList();
+        }
+        
+        public List<Screening> GetScreeningsOfMovie(Guid movieId)
+        {
+            IEnumerable<Screening> screenings;
+            try
+            {
+                screenings = mapper.Fetch<Screening>("WHERE movie_id = ?", movieId);
+            }
+            catch (Exception e)
+            {
+                screenings = null;
+                Console.WriteLine(e.Message);
+                return null;
+            }
+            
+            return screenings.ToList();
         }
 
         public Movie GetMovie(Guid id)
@@ -108,6 +127,7 @@ namespace cassandra_app.cassandra
             {
                 movie = null;
                 Console.WriteLine(e.Message);
+                return null;
             }
 
             return movie;
@@ -129,7 +149,7 @@ namespace cassandra_app.cassandra
             return screening;
         }
 
-        public IEnumerable<Screening> GetScreenings(Guid movieId, Guid theaterId, LocalDate date)
+        public List<Screening> GetScreenings(Guid movieId, Guid theaterId, LocalDate date)
         {
             IEnumerable<Screening> screenings;
             try
@@ -141,9 +161,10 @@ namespace cassandra_app.cassandra
             {
                 screenings = null;
                 Console.WriteLine(e);
+                return null;
             }
 
-            return screenings;
+            return screenings.ToList();
         }
 
         public long GetSoldTickets(Guid screeningId)
@@ -162,7 +183,7 @@ namespace cassandra_app.cassandra
             return count;
         }
 
-        public IEnumerable<Ticket> GetTickets(Guid screeningId)
+        public List<Ticket> GetTickets(Guid screeningId)
         {
             Screening screening = GetScreening(screeningId);
 
@@ -180,9 +201,10 @@ namespace cassandra_app.cassandra
             {
                 tickets = null;
                 Console.WriteLine(e.Message);
+                return null;
             }
 
-            return tickets;
+            return tickets.ToList();
         }
 
         public Ticket GetTicket(Guid ticketId, Guid screeningId)
