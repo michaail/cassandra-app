@@ -127,5 +127,5 @@ INSERT INTO screening (id, movie_id, theater_id, date, time, hall, hall_capacity
   VALUES (019621dd-5a1d-40fd-ad03-652e65fd5b8f, f82a26c2-8c00-457e-be79-7801de327bd4, e150983c-b83b-4569-a0e1-8c2a74f1b6ef, '2018-12-21', '20:00:00', 'B', 300);
 
    
-INSERT INTO tickets_counter (screening_id, movie_id, sold)
-  VALUES (9e1b8d2b-85f3-44fb-acda-bfdd64b84532, 03ff10fc-6e00-4ddf-a768-199e8a316ce1, 0);
+-- INSERT INTO tickets_counter (screening_id, movie_id, sold)
+--   VALUES (9e1b8d2b-85f3-44fb-acda-bfdd64b84532, 03ff10fc-6e00-4ddf-a768-199e8a316ce1, 0);

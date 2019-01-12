@@ -40,17 +40,21 @@ namespace cassandra_app.cassandra
                 return;
             }
             int moviesCount = movies.Count;
+            Console.WriteLine(moviesCount);
             movie = movies[GetRandom(moviesCount)];
+            Console.WriteLine("selected movie: {0}", movie.Title);
 
             // Get coresponding screenings
             List<Screening> screenings = b.GetScreeningsOfMovie(movie.Id);
             Screening screening;
-            if (screenings == null)
+            int screeningsCount = screenings.Count;
+            Console.WriteLine(screeningsCount);
+            if (screeningsCount == 0)
             {
                 Console.WriteLine("No screening for movie {0}", movie.Title);
                 return;
             }
-            int screeningsCount = screenings.Count;
+            
             screening = screenings[GetRandom(screeningsCount)];
 
             
@@ -67,7 +71,7 @@ namespace cassandra_app.cassandra
         // public void Stress(int threads, int amount)
         public void Stress()
         {
-            Backend backend = new Backend();
+            Backend backend = new Backend(false);
 
             Run(backend);
         }

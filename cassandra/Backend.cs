@@ -17,14 +17,22 @@ namespace cassandra_app.cassandra
         private PreparedStatement _incrementCounter, _decrementCounter;
         private PreparedStatement _deleteTicket;
         private IMapper mapper;
+        private CqlQueryOptions queryOptions;
 
-        public Backend()
+        public Backend(bool quorum)
         {
             cluster = Cluster.Builder()
                 .AddContactPoint("127.0.0.1")
                 .Build();
 
             session = cluster.Connect("cineplex");
+            queryOptions = new CqlQueryOptions();
+
+            if (quorum)
+                queryOptions.SetConsistencyLevel(ConsistencyLevel.Quorum);
+            else
+                queryOptions.SetConsistencyLevel(ConsistencyLevel.One);
+
             mapper = new Mapper(session);
             InitializeStatements();
 
@@ -53,7 +61,7 @@ namespace cassandra_app.cassandra
             IEnumerable<Movie> movies;
             try
             {
-                movies = mapper.Fetch<Movie>();
+                movies = mapper.Fetch<Movie>(queryOptions);
             }
             catch (Exception e)
             {
@@ -70,7 +78,7 @@ namespace cassandra_app.cassandra
             IEnumerable<Theater> theaters;
             try
             {
-                theaters = mapper.Fetch<Theater>();
+                theaters = mapper.Fetch<Theater>(queryOptions);
             }
             catch (Exception e)
             {
@@ -87,7 +95,7 @@ namespace cassandra_app.cassandra
             IEnumerable<Screening> screenings;
             try
             {
-                screenings = mapper.Fetch<Screening>();
+                screenings = mapper.Fetch<Screening>(queryOptions);
             }
             catch (Exception e)
             {

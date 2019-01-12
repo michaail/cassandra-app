@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e9a21b6-b69c-4451-bf3d-93172dae13aa" name="Default Changelist" comment="Completed methods &amp; some inserts in schema">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.cassandra-app/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.cassandra-app/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="3e9a21b6-b69c-4451-bf3d-93172dae13aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.cassandra-app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.cassandra-app/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/cassandra-app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/cassandra-app.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/cassandra-app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/cassandra-app.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cassandra/Backend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cassandra/Backend.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cassandra/Runner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/cassandra/Runner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/cassandra-app.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/cassandra-app.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/cassandra-app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/cassandra-app.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/cassandra-app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/cassandra-app.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/cassandra-app.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/cassandra-app.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/cassandra-app.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/cassandra-app.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +14,7 @@
     <session id="-520988194">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.138" value="1" />
           <entry key="project.open.time.27" value="1" />
@@ -66,13 +54,13 @@
           <entry key="Vagrantfile" value="5" />
           <entry key="cql" value="1747" />
           <entry key="cs" value="6467" />
-          <entry key="txt" value="210" />
+          <entry key="txt" value="228" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="C#" value="6467" />
-          <entry key="PLAIN_TEXT" value="220" />
+          <entry key="PLAIN_TEXT" value="238" />
           <entry key="SQL" value="1747" />
         </counts>
       </usages-collector>
@@ -114,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cassandra/Backend.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="211" column="26" lean-forward="true" selection-start-line="211" selection-start-column="26" selection-end-line="211" selection-end-column="26" />
+            <state relative-caret-position="380">
+              <caret line="203" column="28" lean-forward="true" selection-start-line="203" selection-start-column="28" selection-end-line="203" selection-end-column="28" />
               <folding>
                 <marker date="1545160589836" expanded="false" signature="6:240" ph="..." />
                 <marker date="1545160589836" expanded="true" signature="275:8680" ph="{...}" />
@@ -289,6 +277,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="298" />
     <option name="width" value="1354" />
     <option name="height" value="1015" />
   </component>
@@ -389,7 +378,7 @@
       <workItem from="1544988557434" duration="6140000" />
       <workItem from="1544998776564" duration="2523000" />
       <workItem from="1545157061224" duration="181000" />
-      <workItem from="1545159262206" duration="2754000" />
+      <workItem from="1545159262206" duration="2799000" />
     </task>
     <task id="LOCAL-00001" summary="vagrant &amp; models">
       <created>1544564168331</created>
@@ -468,11 +457,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544995311743</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Stress test mockup">
+      <created>1545162042631</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1545162042631</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69582000" />
+    <option name="totallyTimeSpent" value="69627000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -484,8 +480,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1354" height="1015" extended-state="4" />
-    <editor active="true" />
+    <frame x="298" y="0" width="1354" height="1015" extended-state="4" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16360857" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -493,7 +488,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3062147" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3322034" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3322034" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -574,7 +569,8 @@
     <MESSAGE value="Changed models to match mapper" />
     <MESSAGE value="Methods" />
     <MESSAGE value="Completed methods &amp; some inserts in schema" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed methods &amp; some inserts in schema" />
+    <MESSAGE value="Stress test mockup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stress test mockup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -718,8 +714,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cassandra/Backend.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="211" column="26" lean-forward="true" selection-start-line="211" selection-start-column="26" selection-end-line="211" selection-end-column="26" />
+        <state relative-caret-position="380">
+          <caret line="203" column="28" lean-forward="true" selection-start-line="203" selection-start-column="28" selection-end-line="203" selection-end-column="28" />
           <folding>
             <marker date="1545160589836" expanded="false" signature="6:240" ph="..." />
             <marker date="1545160589836" expanded="true" signature="275:8680" ph="{...}" />

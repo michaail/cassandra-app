@@ -1,5 +1,5 @@
 ﻿using System;
-using cassandra_app.cassandra;
+using cassandra_app.src;
 
 namespace cassandra_app
 {
@@ -7,9 +7,7 @@ namespace cassandra_app
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Runner r = new Runner();
-            r.Stress();
+            Runner runner = new Runner();
         }
     }
 }
