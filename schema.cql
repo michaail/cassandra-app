@@ -1,5 +1,5 @@
 CREATE KEYSPACE if NOT EXISTS ticketer
-  WITH replication = {'class': 'SimpleStrategy', 'replication_factor' : 3 };
+  WITH replication = {'class': 'SimpleStrategy', 'replication_factor' : 2 };
 
 USE ticketer;
 
@@ -34,23 +34,23 @@ CREATE TABLE IF NOT EXISTS tickets_counter (
 
 
 INSERT INTO event (id, name, location, total_tickets, sold_out) 
-  VALUES (1, 'Phil Collins', 'PGE Narodowy', 45000, false);
+  VALUES (1, 'Phil Collins', 'PGE Narodowy', 50000, false);
 
 INSERT INTO event (id, name, location, total_tickets, sold_out) 
-  VALUES (2, 'Nick Cave', 'Auckland Town Hall', 5000, false);
+  VALUES (2, 'Nick Cave', 'Auckland Town Hall', 100000, false);
 
 INSERT INTO event (id, name, location, total_tickets, sold_out) 
-  VALUES (3, 'Paul McCartney', 'Maracana Stadium', 184000, false);
+  VALUES (3, 'Paul McCartney', 'Maracana Stadium', 100000, false);
 
 INSERT INTO event (id, name, location, total_tickets, sold_out) 
   VALUES (4, 'The Rolling Stones', 'O2 Arena', 60000, false);
 
 INSERT INTO event (id, name, location, total_tickets, sold_out) 
-  VALUES (5, 'Live Aid', 'Wembley Stadium', 85000, false);
+  VALUES (5, 'Live Aid', 'Wembley Stadium', 80000, false);
 
 
-UPDATE tickets_counter SET remaining = remaining + 45000 WHERE event_id = 1;
-UPDATE tickets_counter SET remaining = remaining + 5000 WHERE event_id = 2;
-UPDATE tickets_counter SET remaining = remaining + 184000 WHERE event_id = 3;
-UPDATE tickets_counter SET remaining = remaining + 60000 WHERE event_id = 4;
-UPDATE tickets_counter SET remaining = remaining + 85000 WHERE event_id = 5;
+UPDATE tickets_counter SET remaining = remaining + 0 WHERE event_id = 2;
+-- UPDATE tickets_counter SET remaining = remaining + 10000 WHERE event_id = 2;
+-- UPDATE tickets_counter SET remaining = remaining + 100000 WHERE event_id = 3;
+-- UPDATE tickets_counter SET remaining = remaining + 60000 WHERE event_id = 4;
+-- UPDATE tickets_counter SET remaining = remaining + 80000 WHERE event_id = 5;

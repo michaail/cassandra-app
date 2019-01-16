@@ -29,8 +29,20 @@ namespace cassandra_app.src
                 .WithQueryOptions(new QueryOptions().SetConsistencyLevel(consistencyLevel))
                 .Build();
 
-            session = cluster.Connect("ticketer");
+            try 
+            {
+                session = cluster.Connect("ticketer");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Couldn't connect to cluster: {0}", e.Message);
+                return;
+            }
             
+            // var config = new MappingConfiguration();
+            // config.Define(new Map<Models.Reservation>()
+            //     .TableName("reservation")
+            //     .PartitionKey(r => r.Id));
 
             mapper = new Mapper(session);
             InitializeStatements();

@@ -9,31 +9,69 @@ namespace cassandra_app.src
     public static class Statistics
     {
         private static int reservationsPlaced = 0;
-        private static int reservationsRequested = 0;
+        private static int reservations = 0;
         private static int reservationsCancelled = 0;
-        private static int reservationDeclined = 0;
+        private static int reservationsDeclined = 0;
         private static int ticketsReserved = 0;
+        private static int ticketsDeclined = 0;
+        private static int client = 0;
 
         private static void log(int user, string logMsg)
         {
             Console.WriteLine("[{0}] -> {1}", user, logMsg);
         }
 
-        public static void Placed()
+        public static void Placed(int tickets)
         {
-            reservationsPlaced += 1;
+            reservations += tickets;
+            reservationsPlaced += tickets;
         }
 
-        public static void Requested()
+        // public static void Reserved(int tickets)
+        // {
+        //     reservationsRequested += tickets;
+        // }
+
+        public static void Cancelled(int tickets)
         {
-            reservationsRequested += 1;
+            reservations -= tickets;
+            reservationsCancelled += tickets;
         }
 
-        public static void Cancelled()
+        public static void Declined(int tickets)
         {
-            reservationsCancelled += 1;
+            reservationsDeclined += tickets;
         }
 
+        public static void ClientCreated()
+        {
+            client += 1;
+        }
+
+        public static int GetPlaced()
+        {
+            return reservationsPlaced;
+        }
+
+        public static int GetReserved()
+        {
+            return reservations;
+        }
+
+        public static int GetCancelled()
+        {
+            return reservationsCancelled;
+        }
+
+        public static int GetDeclined()
+        {
+            return reservationsDeclined;
+        }
+
+        public static int GetClientCount()
+        {
+            return client;
+        }
 
     }
 }

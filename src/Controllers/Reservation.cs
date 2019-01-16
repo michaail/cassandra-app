@@ -20,14 +20,14 @@ namespace cassandra_app.src.Controllers
             this.tickets_Counter = new Tickets_Counter(backend);
         }
 
-        public void PlaceReservation(Models.Reservation reservation)
+        public bool PlaceReservation(Models.Reservation reservation)
         {
             long? remainingTickets = tickets_Counter.GetRemainingTicketsValue(reservation.Event_Id);
             if (remainingTickets != null)   // counter exists
             {
-                if (remainingTickets >= reservation.Tickets_count)
+                if (100000 - remainingTickets >= reservation.Tickets_count)
                 {
-                    mapper.InsertAsync(reservation);
+                    mapper.Insert(reservation);
                     // get tickets from pool
                     tickets_Counter.DecrementRemainingTicketsCountBy(reservation.Event_Id, 
                         reservation.Tickets_count);
@@ -35,24 +35,35 @@ namespace cassandra_app.src.Controllers
                 else
                 {
                     Console.WriteLine("Tickets count exceeded");
+                    return false;
                 }
             }
             else
             {
                 Console.WriteLine("Couldn't find ticketsCounter");
+                return false;
             }
+            return true;
         }
 
-        public void CancellReservation(Guid reservationId)
+        public void CancellReservation(Guid reservationId, int eventId)
         {
-            Models.Reservation reservation = GetReservation(reservationId);
+            Models.Reservation reservation = GetReservation(reservationId, eventId);
             if (reservation != null)    // reservation exists
             {
                 reservation.Cancelled = true;
-                mapper.Update(reservation);
-                // return tickets to pool
-                tickets_Counter.IncrementRemainingTicketsCountBy(reservation.Event_Id,
+                try
+                {
+                    mapper.Update(reservation);
+                    // return tickets to pool
+                    tickets_Counter.IncrementRemainingTicketsCountBy(reservation.Event_Id,
                     reservation.Tickets_count);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                
             }
             else
             {
@@ -76,12 +87,12 @@ namespace cassandra_app.src.Controllers
             return reservations.ToList();
         }
 
-        public Models.Reservation GetReservation(Guid id)
+        public Models.Reservation GetReservation(Guid id, int eventId)
         {
             Models.Reservation reservation;
             try
             {
-                reservation = mapper.Fetch<Models.Reservation>("WHERE id = ?", id).First();
+                reservation = mapper.Fetch<Models.Reservation>("WHERE id = ? AND event_id = ?", id, eventId).First();
             }
             catch (Exception e)
             {

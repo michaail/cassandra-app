@@ -63,10 +63,10 @@ namespace cassandra_app.src.Controllers
 
         public void IncrementRemainingTicketsCountBy(int eventId, int value)
         {
-            var statement = incrementCounter.Bind((long)value, eventId);
+            var statement = decrementCounter.Bind((long)value, eventId);
             try
             {
-                session.ExecuteAsync(statement);
+                session.Execute(statement);
             }
             catch (Exception e)
             {
@@ -76,10 +76,10 @@ namespace cassandra_app.src.Controllers
 
         public void DecrementRemainingTicketsCountBy(int eventId, int value)
         {
-            var statement = decrementCounter.Bind((long)value, eventId);
+            var statement = incrementCounter.Bind((long)value, eventId);
             try
             {
-                session.ExecuteAsync(statement);
+                session.Execute(statement);
             }
             catch (Exception e)
             {

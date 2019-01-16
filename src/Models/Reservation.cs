@@ -2,12 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Cassandra;
+using Cassandra.Mapping.Attributes;
 
 namespace cassandra_app.src.Models
 {
     public class Reservation
     {
+        [PartitionKey]
         public Guid Id { get; set; }
+        [PartitionKey]
         public int Event_Id { get; set; }
         public int User { get; set; }
         public int Tickets_count { get; set; }
