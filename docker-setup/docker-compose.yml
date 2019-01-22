@@ -27,11 +27,11 @@ services:
       - "cassandra-seed"
     # mem_limit: 2gb
 
-  cassandra-node-3:
-    image: cassandra:2.2.8
-    command: /bin/bash -c "echo 'Waiting for seed node' && sleep 140 && /docker-entrypoint.sh cassandra -f"
-    environment:
-      - "CASSANDRA_SEEDS=cassandra-seed-node"
-    depends_on:
-      - "cassandra-seed"
-    # mem_limit: 2gb
+  # cassandra-node-3:
+  #   image: cassandra:2.2.8
+  #   command: /bin/bash -c "echo 'Waiting for seed node' && sleep 140 && /docker-entrypoint.sh cassandra -f"
+  #   environment:
+  #     - "CASSANDRA_SEEDS=cassandra-seed-node"
+  #   depends_on:
+  #     - "cassandra-seed"
+  #   # mem_limit: 2gb

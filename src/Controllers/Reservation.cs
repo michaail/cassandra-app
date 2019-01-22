@@ -20,21 +20,24 @@ namespace cassandra_app.src.Controllers
             this.tickets_Counter = new Tickets_Counter(backend);
         }
 
-        public bool PlaceReservation(Models.Reservation reservation)
+        public bool PlaceReservation(Models.Reservation reservation, int eventCapacity)
         {
-            long? remainingTickets = tickets_Counter.GetRemainingTicketsValue(reservation.Event_Id);
+            long? remainingTickets = tickets_Counter.GetCurrentTicketsCount(reservation.Event_Id);
             if (remainingTickets != null)   // counter exists
             {
-                if (100000 - remainingTickets >= reservation.Tickets_count)
+                // are tickets still available
+                if (eventCapacity - remainingTickets >= reservation.Tickets_count)
                 {
                     mapper.Insert(reservation);
                     // get tickets from pool
                     tickets_Counter.DecrementRemainingTicketsCountBy(reservation.Event_Id, 
                         reservation.Tickets_count);
+                    Statistics.Placed(reservation.Event_Id, reservation.Tickets_count);
                 }
                 else
                 {
-                    Console.WriteLine("Tickets count exceeded");
+                    // Console.WriteLine("Tickets count exceeded");
+                    Statistics.Declined(reservation.Event_Id, reservation.Tickets_count);
                     return false;
                 }
             }
@@ -57,17 +60,18 @@ namespace cassandra_app.src.Controllers
                     mapper.Update(reservation);
                     // return tickets to pool
                     tickets_Counter.IncrementRemainingTicketsCountBy(reservation.Event_Id,
-                    reservation.Tickets_count);
+                        reservation.Tickets_count);
+                    Statistics.Cancelled(reservation.Event_Id, reservation.Tickets_count);
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
                 }
-                
             }
             else
             {
                 Console.WriteLine("No such reservation found");
+                Statistics.NotFound(eventId);
             }
         }
 
@@ -84,6 +88,7 @@ namespace cassandra_app.src.Controllers
                 Console.WriteLine(e.Message);
                 return null;
             }
+
             return reservations.ToList();
         }
 

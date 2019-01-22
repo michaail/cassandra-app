@@ -13,20 +13,13 @@ namespace cassandra_app.src
     public class Runner
     {
         private BackendSession backend;
-        // private Models.Reservation reservationModel;
-        // private Models.Event eventModel;
-        // private Models.Tickets_Counter counterModel;
 
         private Controllers.Tickets_Counter counterController;
         private Controllers.Reservation reservationController;
         private Controllers.Event eventController;
     
-        // zrobić parę operacji w wątkach rezerwacja i natychmiast odczyt i anulowanie
-
-
-
         private int clientsCount = 200;
-        private static int clientIdOffset = 100;
+        private static int clientIdOffset = 1000;
 
         public Runner()
         {
@@ -37,27 +30,29 @@ namespace cassandra_app.src
             eventController = new Controllers.Event(backend);
 
             CancellationTokenSource source = new CancellationTokenSource();
+            
+            // Get one of the events to consider
             List<Models.Event> events = eventController.GetAllEvents();
             Models.Event ev = events.Where(e => e.Id == 2).First();
-
             Random rand = new Random();
 
-            Console.WriteLine("Counter value: {0}", counterController.GetRemainingTicketsValue(2));
+            // get initial tickets counter
+            Console.WriteLine("Counter value: {0}", counterController.GetCurrentTicketsCount(ev.Id));
 
-            CancellationToken token = source.Token;
-            
-            // GetStatistics(200, token);
-
-            for (int k=0; k<100; k++)
+            // run 100 rounds
+            for (int k=0; k<5; k++)
             {
+                // in 1150 threads
                 List<Thread> threads = new List<Thread>();
-                for (int i = 0; i < 1000; i++)
+                for (int i = 0; i < 2300; i++)
                 {
+                    // run thread to place reservation and cancel 10% of them
                     Thread t = new Thread(() => {
-                        Client c = new Client(reservationController, clientIdOffset, 2, 20, 10, 1);
+                        Client c = new Client(reservationController, clientIdOffset, ev.Id, 10, 5, 1, ev.Total_Tickets);
                         c.run();
-                    
                     });
+
+                    clientIdOffset += 1;
                     t.Start();
                     threads.Add(t);
 
@@ -66,70 +61,12 @@ namespace cassandra_app.src
                 {
                     th.Join();
                 }
-                GetStatistics(1, token);
+                GetStatistics(ev.Id);
             }
 
-            
-            
-            
+            Thread.Sleep(1000);
+            GetStatistics(ev.Id);
 
-            // List<Task> tasks = new List<Task>();
-            // for (int i = 0; i < 40; i++)
-            // {
-            //     Task task = Task.Factory.StartNew(() => {
-            //         clientIdOffset += 1;
-                    
-            //             Client c = new Client(reservationController, clientIdOffset, 2, 4000, 1500, rand.Next(9)+1);
-            //             c.run();
-            //             // await Task.Delay(50);
-                    
-                    
-                    
-            //     });
-            //     tasks.Add(task);
-            // }
-            
-            // Task.WaitAll(tasks.ToArray());
-            source.Cancel();
-
-            Console.WriteLine("[END] Counter value: {0}", counterController.GetRemainingTicketsValue(2));
-            Console.WriteLine("[END] Statistics: reserved: {0}\n" +
-                    "[END] Statistics: placed: {1}\n" +
-                    "[END] Statistics: cancelled: {2}\n" +
-                    "[END] Statistics: declined: {3}", 
-                    Statistics.GetReserved(), Statistics.GetPlaced(), 
-                    Statistics.GetCancelled(), Statistics.GetDeclined());
-            Console.WriteLine("[END] clients created {0}", Statistics.GetClientCount());
-            
-
-
-            // Models.Event ev = events.Where(e => e.Id == 3).First();
-
-            // Console.WriteLine(ev.Total_Tickets);
-            // Stopwatch sW = Stopwatch.StartNew();
-
-            // List<Task> tasks = new List<Task>();
-            // for (int j=0; j<5; j++)
-            // {
-            //     Task task = Task.Factory.StartNew(() => run(36800));
-            //     tasks.Add(task);
-
-            // }
-            // // Task task = Task.Factory.StartNew(() => )
-
-            // Task.WaitAll(tasks.ToArray());
-            // sW.Stop();
-            // Console.WriteLine(sW.ElapsedMilliseconds);
-
-            // long? value = c;
-            // Console.WriteLine(value);
-            
-            // for (int i=0; i<ev.Total_Tickets; i++)
-            // {
-            //     Reservation res = new Reservation(Guid.NewGuid(), ev.Id, 10, 1, false, DateTimeOffset.Now);
-            //     reservationController.PlaceReservation(res);
-            // }
-        
         }
 
         Models.Event GetRandomEvent(List<Models.Event> events)
@@ -140,33 +77,26 @@ namespace cassandra_app.src
             return events[r];
         }
 
-        public void run(int count)
+
+        private void GetStatistics(int eventId)
         {
-            for (int i=0; i<count; i++)
-            {
-                Reservation res = new Reservation(Guid.NewGuid(), 3, 10, 1, false, DateTimeOffset.Now);
-                reservationController.PlaceReservation(res);
-            }
+            Console.WriteLine("Counter value: {0}", counterController.GetCurrentTicketsCount(eventId));
+            Console.WriteLine(
+                "Statistics: reservations: {0}\n" +
+                "Statistics: tickets reserved: {1}\n" +
+                "Statistics: reservations cancelled: {2}\n" +
+                "Statistics: tickets cancelled: {3}\n" +
+                "Statistics: reservations declined: {4}\n" +
+                "Statistics: tickets declined: {5}\n" +
+                "Statistics: not found (not yer replicated): {6}\n",
+                Statistics.GetReservations(eventId), 
+                Statistics.GetTicketsReserved(eventId), 
+                Statistics.GetReservationsCancelled(eventId),
+                Statistics.GetTicketsCancelled(eventId), 
+                Statistics.GetReservationsDeclined(eventId),
+                Statistics.GetTicketsDeclined(eventId),
+                Statistics.GetNotFound(eventId)
+            );
         }
-
-        private void GetStatistics(int interval, CancellationToken cancellation)
-        {
-            // while (true)
-            // {
-                // await Task.Delay(interval, cancellation);
-                Console.WriteLine("Counter value: {0}", counterController.GetRemainingTicketsValue(2));
-                Console.WriteLine("Statistics: reserved: {0}\n" +
-                    "Statistics: placed: {1}\n" +
-                    "Statistics: cancelled: {2}\n" +
-                    "Statistics: declined: {3}", 
-                    Statistics.GetReserved(), Statistics.GetPlaced(), 
-                    Statistics.GetCancelled(), Statistics.GetDeclined());
-                
-                
-            // }
-
-
-        }
-
     }
 }

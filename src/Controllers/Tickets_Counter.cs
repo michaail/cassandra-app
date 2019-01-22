@@ -44,7 +44,7 @@ namespace cassandra_app.src.Controllers
             return ticketsCounters.ToList();
         }
 
-        public long? GetRemainingTicketsValue(int eventId)
+        public long? GetCurrentTicketsCount(int eventId)
         {
             Models.Tickets_Counter counter;
             try

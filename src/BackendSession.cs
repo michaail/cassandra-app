@@ -38,11 +38,6 @@ namespace cassandra_app.src
                 Console.WriteLine("Couldn't connect to cluster: {0}", e.Message);
                 return;
             }
-            
-            // var config = new MappingConfiguration();
-            // config.Define(new Map<Models.Reservation>()
-            //     .TableName("reservation")
-            //     .PartitionKey(r => r.Id));
 
             mapper = new Mapper(session);
             InitializeStatements();
@@ -62,11 +57,6 @@ namespace cassandra_app.src
         {
             return session;
         }
-
-        // public CqlQueryOptions GetQueryOptions()
-        // {
-        //     return queryOptions;
-        // }
 
         public IMapper GetMapper()
         {
