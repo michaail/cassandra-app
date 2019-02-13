@@ -44,7 +44,7 @@ namespace cassandra_app.src
             {
                 // in 1150 threads
                 List<Thread> threads = new List<Thread>();
-                for (int i = 0; i < 2300; i++)
+                for (int i = 0; i < 1000; i++)
                 {
                     // run thread to place reservation and cancel 10% of them
                     Thread t = new Thread(() => {
