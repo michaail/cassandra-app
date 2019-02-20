@@ -32,7 +32,8 @@ namespace cassandra_app.src.Controllers
                     // get tickets from pool
                     tickets_Counter.DecrementRemainingTicketsCountBy(reservation.Event_Id, 
                         reservation.Tickets_count);
-                    Statistics.Placed(reservation.Event_Id, reservation.Tickets_count);
+                    Statistics.Reservation(reservation.Event_Id);
+                    // Statistics.Placed(reservation.Event_Id, reservation.Tickets_count);
                 }
                 else
                 {

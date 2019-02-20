@@ -39,16 +39,17 @@ namespace cassandra_app.src
             // get initial tickets counter
             Console.WriteLine("Counter value: {0}", counterController.GetCurrentTicketsCount(ev.Id));
 
-            // run 100 rounds
+            // run 5 rounds
             for (int k=0; k<5; k++)
             {
                 // in 1150 threads
                 List<Thread> threads = new List<Thread>();
                 for (int i = 0; i < 1000; i++)
                 {
+                    var clientIdOffset_ = clientIdOffset;
                     // run thread to place reservation and cancel 10% of them
                     Thread t = new Thread(() => {
-                        Client c = new Client(reservationController, clientIdOffset, ev.Id, 10, 5, 1, ev.Total_Tickets);
+                        Client c = new Client(reservationController, clientIdOffset_, ev.Id, 10, 5, 1, ev.Total_Tickets);
                         c.run();
                     });
 

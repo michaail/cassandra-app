@@ -57,6 +57,10 @@ namespace cassandra_app.src
                     {
                         Statistics.Placed(eventId, ticketsCount);
                     }
+                    else
+                    {
+                        Statistics.NotFound(eventId);
+                    }
                 }
             }
             else

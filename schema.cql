@@ -37,7 +37,7 @@ INSERT INTO event (id, name, location, total_tickets, sold_out)
   VALUES (1, 'Phil Collins', 'PGE Narodowy', 10000, false);
 
 INSERT INTO event (id, name, location, total_tickets, sold_out) 
-  VALUES (2, 'Nick Cave', 'Auckland Town Hall', 10000, false);
+  VALUES (2, 'Nick Cave', 'Auckland Town Hall', 5000, false);
 
 INSERT INTO event (id, name, location, total_tickets, sold_out) 
   VALUES (3, 'Paul McCartney', 'Maracana Stadium', 10000, false);
